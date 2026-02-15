@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать челлендж - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Создайте свой собственный баскетбольный челлендж и поделитесь им с друзьями">
+    <meta name="keywords" content="баскетбол, создать челлендж, кастомный челлендж, поделиться, друзья">
+    <link rel="canonical" href="https://basketguide.ru/challenges/create-challenge">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Создать челлендж - BasketGuide">
+    <meta property="og:description" content="Создайте свой собственный баскетбольный челлендж и поделитесь им с друзьями">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/challenges/create-challenge">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Создать челлендж - BasketGuide">
+    <meta name="twitter:description" content="Создайте свой собственный баскетбольный челлендж">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html" class="active"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../tutorials.html"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="challenge-hero">
+            <div class="container">
+                <h1>Создать свой челлендж</h1>
+                <p>Разработайте уникальный баскетбольный челлендж и поделитесь им с друзьями</p>
+            </div>
+        </section>
+
+        <section class="create-challenge-form">
+            <div class="container">
+                <form id="custom-challenge-form">
+                    <div class="form-group">
+                        <label for="challenge-title">Название челленджа</label>
+                        <input type="text" id="challenge-title" name="title" required placeholder="Например: '10 бросков из 3-х точек подряд'">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="challenge-description">Описание</label>
+                        <textarea id="challenge-description" name="description" rows="4" required placeholder="Опишите, что нужно сделать в челлендже"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="challenge-type">Тип челленджа</label>
+                            <select id="challenge-type" name="type" required>
+                                <option value="">Выберите тип</option>
+                                <option value="skill">Навыки</option>
+                                <option value="physics">Физика/Физподготовка</option>
+                                <option value="rules">Знание правил</option>
+                                <option value="agility">Ловкость</option>
+                                <option value="endurance">Выносливость</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="challenge-difficulty">Сложность</label>
+                            <select id="challenge-difficulty" name="difficulty" required>
+                                <option value="">Выберите сложность</option>
+                                <option value="easy">Легкий</option>
+                                <option value="medium">Средний</option>
+                                <option value="hard">Сложный</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="challenge-duration">Продолжительность (в минутах)</label>
+                            <input type="number" id="challenge-duration" name="duration" min="1" max="1440" placeholder="Время выполнения в минутах">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="challenge-goal">Цель</label>
+                            <input type="text" id="challenge-goal" name="goal" placeholder="Например: '10 попаданий подряд'">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="challenge-instructions">Инструкции по выполнению</label>
+                        <textarea id="challenge-instructions" name="instructions" rows="5" placeholder="Подробные инструкции по выполнению челленджа"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Требуемое оборудование</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="equipment" value="basketball"> Баскетбольный мяч
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="equipment" value="hoop"> Баскетбольное кольцо
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="equipment" value="cones"> Конусы/маркеры
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="equipment" value="measuring-tape"> Рулетка
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="equipment" value="stopwatch"> Секундомер
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Создать челлендж</button>
+                        <button type="reset" class="btn reset-btn">Очистить</button>
+                    </div>
+                </form>
+
+                <div id="challenge-preview" class="challenge-preview" style="display: none;">
+                    <h3>Предварительный просмотр</h3>
+                    <div class="challenge-card">
+                        <div class="challenge-info">
+                            <h4 id="preview-title">Название челленджа</h4>
+                            <p id="preview-description">Описание челленджа</p>
+                            <div class="challenge-meta">
+                                <span id="preview-type" class="type skill">Навыки</span>
+                                <span id="preview-difficulty" class="difficulty medium">Средний</span>
+                                <span id="preview-duration">Длительность: -- мин</span>
+                            </div>
+                        </div>
+                        <div class="challenge-goal">
+                            <h5>Цель:</h5>
+                            <p id="preview-goal">Цель челленджа</p>
+                        </div>
+                        <div class="challenge-instructions">
+                            <h5>Инструкции:</h5>
+                            <p id="preview-instructions">Инструкции по выполнению</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="share-options" class="share-options" style="display: none;">
+                    <h3>Поделиться своим челленджем</h3>
+                    <div class="share-buttons">
+                        <button class="btn btn-primary" onclick="shareChallengeLink()">Скопировать ссылку</button>
+                        <button class="btn btn-secondary" onclick="generateChallengeQR()">Создать QR-код</button>
+                        <button class="btn btn-outline" onclick="shareToSocialMedia()">Поделиться в соцсетях</button>
+                    </div>
+                    <div id="generated-link" class="generated-link" style="display: none;"></div>
+                    <div id="qr-container" class="qr-container" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../tutorials.html">Видео</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы создания челленджа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Создать челлендж - BasketGuide',
+                'Создайте свой собственный баскетбольный челлендж и поделитесь им с друзьями',
+                ['баскетбол', 'создать челлендж', 'кастомный челлендж', 'поделиться', 'друзья']
+            );
+        });
+
+        // Обработчик отправки формы
+        document.getElementById('custom-challenge-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Получаем значения формы
+            const formData = {
+                title: document.getElementById('challenge-title').value,
+                description: document.getElementById('challenge-description').value,
+                type: document.getElementById('challenge-type').value,
+                difficulty: document.getElementById('challenge-difficulty').value,
+                duration: document.getElementById('challenge-duration').value,
+                goal: document.getElementById('challenge-goal').value,
+                instructions: document.getElementById('challenge-instructions').value
+            };
+
+            // Показываем превью
+            showChallengePreview(formData);
+
+            // Генерируем уникальный ID для челленджа
+            const challengeId = 'custom-' + Date.now();
+            
+            // Здесь будет сохранение челленджа
+            console.log('Созданный челлендж:', formData);
+            
+            // Показываем опции для поделиться
+            document.getElementById('share-options').style.display = 'block';
+            
+            // Генерируем ссылку для поделиться
+            const challengeLink = `${window.location.origin}/pages/challenge/${challengeId}`;
+            document.getElementById('generated-link').innerHTML = `<p>Ваша ссылка на челлендж: <a href="${challengeLink}" target="_blank">${challengeLink}</a></p>`;
+            document.getElementById('generated-link').style.display = 'block';
+        });
+
+        // Функция для отображения превью челленджа
+        function showChallengePreview(data) {
+            document.getElementById('preview-title').textContent = data.title;
+            document.getElementById('preview-description').textContent = data.description;
+            document.getElementById('preview-type').textContent = getChallengeTypeLabel(data.type);
+            document.getElementById('preview-type').className = `type ${data.type}`;
+            document.getElementById('preview-difficulty').textContent = getDifficultyLabel(data.difficulty);
+            document.getElementById('preview-difficulty').className = `difficulty ${data.difficulty}`;
+            document.getElementById('preview-duration').textContent = `Длительность: ${data.duration || '--'} мин`;
+            document.getElementById('preview-goal').textContent = data.goal || 'Не указана';
+            document.getElementById('preview-instructions').textContent = data.instructions || 'Не указаны';
+
+            document.getElementById('challenge-preview').style.display = 'block';
+        }
+
+        // Функция для получения текстовой метки типа челленджа
+        function getChallengeTypeLabel(type) {
+            const labels = {
+                'skill': 'Навыки',
+                'physics': 'Физика/Физподготовка',
+                'rules': 'Знание правил',
+                'agility': 'Ловкость',
+                'endurance': 'Выносливость'
+            };
+            return labels[type] || type;
+        }
+
+        // Функция для получения текстовой метки сложности
+        function getDifficultyLabel(difficulty) {
+            const labels = {
+                'easy': 'Легкий',
+                'medium': 'Средний',
+                'hard': 'Сложный'
+            };
+            return labels[difficulty] || difficulty;
+        }
+
+        // Функция для поделиться ссылкой
+        function shareChallengeLink() {
+            const linkElement = document.querySelector('#generated-link a');
+            if (linkElement) {
+                navigator.clipboard.writeText(linkElement.href).then(function() {
+                    alert('Ссылка скопирована в буфер обмена!');
+                }).catch(function(err) {
+                    console.error('Ошибка при копировании ссылки: ', err);
+                });
+            }
+        }
+
+        // Функция для генерации QR-кода
+        function generateChallengeQR() {
+            const linkElement = document.querySelector('#generated-link a');
+            if (linkElement) {
+                // В реальном приложении здесь будет генерация QR-кода
+                // Пока просто покажем сообщение
+                alert('QR-код для ссылки: ' + linkElement.href);
+                
+                // В реальном приложении здесь будет использование библиотеки для генерации QR-кода
+                // Например, qrcode.js
+            }
+        }
+
+        // Функция для поделиться в социальных сетях
+        function shareToSocialMedia() {
+            const linkElement = document.querySelector('#generated-link a');
+            if (linkElement) {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Попробуй мой баскетбольный челлендж!',
+                        text: 'Я создал интересный баскетбольный челлендж, попробуй пройти его!',
+                        url: linkElement.href
+                    }).catch(console.error);
+                } else {
+                    // Альтернативный метод для браузеров без поддержки Web Share API
+                    shareChallengeLink();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

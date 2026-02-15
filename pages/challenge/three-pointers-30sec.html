@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 трехочковых бросков за 30 секунд - Челленджи - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Челлендж: 5 трехочковых бросков за 30 секунд. Проверьте свою скорость и точность в этом испытании баскетбольных навыков">
+    <meta name="keywords" content="баскетбол, челлендж, трехочковые, броски, скорость, точность, навыки">
+    <link rel="canonical" href="https://basketguide.ru/challenges/three-pointers-30sec">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="5 трехочковых бросков за 30 секунд - Челленджи - BasketGuide">
+    <meta property="og:description" content="Челлендж: 5 трехочковых бросков за 30 секунд. Проверьте свою скорость и точность в этом испытании баскетбольных навыков">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/challenges/three-pointers-30sec">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="5 трехочковых бросков за 30 секунд - Челленджи - BasketGuide">
+    <meta name="twitter:description" content="Челлендж: 5 трехочковых бросков за 30 секунд. Проверьте свои навыки броска в баскетболе">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html" class="active"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../tutorials.html"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="challenge-hero">
+            <div class="container">
+                <h1>5 трехочковых бросков за 30 секунд</h1>
+                <p>Проверьте свою скорость и точность в этом испытании баскетбольных навыков</p>
+            </div>
+        </section>
+
+        <section class="challenge-content">
+            <div class="container">
+                <div class="challenge-wrapper">
+                    <div class="challenge-info">
+                        <div class="challenge-meta">
+                            <span class="difficulty hard">Сложный</span>
+                            <span class="type skill">Навыки</span>
+                            <span class="time-limit">30 секунд</span>
+                        </div>
+                        
+                        <h2>Описание челленджа</h2>
+                        <p>Ваша задача - сделать 5 успешных трехочковых бросков за 30 секунд. У вас есть ровно 30 секунд, чтобы забросить 5 мячей с линии трехочкового броска. Броски могут быть из разных точек за дугой.</p>
+                        
+                        <h3>Инструкции:</h3>
+                        <ol>
+                            <li>Подготовьте 5 мячей вблизи линии трехочкового броска</li>
+                            <li>По команде начните выполнять броски</li>
+                            <li>Мячи можно брать в любом порядке</li>
+                            <li>У вас есть 30 секунд на выполнение 5 попаданий</li>
+                            <li>Цель: сделать 5 попаданий за 30 секунд</li>
+                        </ol>
+                        
+                        <h3>Советы для успеха:</h3>
+                        <ul>
+                            <li>Начните с более легких точек (углы или крылья)</li>
+                            <li>Сохраняйте постоянный ритм бросков</li>
+                            <li>Фокусируйтесь на технике, а не на скорости</li>
+                            <li>Используйте короткие перерывы между бросками для прицеливания</li>
+                        </ul>
+                        
+                        <div class="challenge-timer" id="challenge-timer">
+                            <h3>Таймер выполнения:</h3>
+                            <div class="timer-display" id="timer">00:30</div>
+                            <button class="btn btn-primary" onclick="startChallengeTimer()">Начать выполнение</button>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-interaction">
+                        <div class="challenge-form">
+                            <h3>Отслеживание прогресса</h3>
+                            <form id="challenge-tracking-form">
+                                <div class="form-group">
+                                    <label for="attempts">Всего бросков</label>
+                                    <input type="number" id="attempts" name="attempts" class="form-control" min="5" value="5">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="made">Реализовано (из 5)</label>
+                                    <input type="number" id="made" name="made" class="form-control" min="0" max="5" value="0">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="time-taken">Время выполнения (сек)</label>
+                                    <input type="number" id="time-taken" name="time-taken" class="form-control" min="1" max="30" value="">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="result-notes">Комментарии</label>
+                                    <textarea id="result-notes" name="result-notes" class="form-control" rows="3" placeholder="Заметки о выполнении челленджа"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Сохранить результат</button>
+                            </form>
+                        </div>
+                        
+                        <div class="challenge-stats">
+                            <h3>Статистика челленджа</h3>
+                            <div class="stat-item">
+                                <span class="stat-label">Участники:</span>
+                                <span class="stat-value">842</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Успешных завершений:</span>
+                                <span class="stat-value">18%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Лучший результат:</span>
+                                <span class="stat-value">5/5 за 22 сек</span>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-share">
+                            <h3>Поделиться результатом</h3>
+                            <button class="btn btn-secondary" onclick="shareResult()">
+                                <i class="fas fa-share-alt"></i> Поделиться
+                            </button>
+                            <button class="btn btn-secondary" onclick="generateQRCode()">
+                                <i class="fas fa-qrcode"></i> QR-код вызова
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-related-content">
+            <div class="container">
+                <h2>Связанный контент</h2>
+                <div class="related-content-grid">
+                    <div class="related-section">
+                        <h3>Связанные правила</h3>
+                        <ul>
+                            <li><a href="../rule/three-point-rule.html" class="related-link">Правило трехочковой линии</a></li>
+                            <li><a href="../rule/foul.html" class="related-link">Фол (Нарушение)</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные калькуляторы</h3>
+                        <ul>
+                            <li><a href="../calculator/player-index.html" class="related-link">Индекс эффективности игрока</a></li>
+                            <li><a href="../calculator/player-position.html" class="related-link">Позиция игрока</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные тренировочные планы</h3>
+                        <ul>
+                            <li><a href="../plan/shooting-improvement-1month.html" class="related-link">Улучшение бросков</a></li>
+                            <li><a href="../plan/three-point-training.html" class="related-link">Тренировка трехочковых бросков</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные видео</h3>
+                        <ul>
+                            <li><a href="../tutorial/shooting-technique.html" class="related-link">Техника броска</a></li>
+                            <li><a href="../tutorial/three-pointer-basics.html" class="related-link">Основы трехочкового броска</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-leaderboard">
+            <div class="container">
+                <h2>Таблица лидеров</h2>
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-tab="overall">Общий рейтинг</button>
+                    <button class="tab-btn" data-tab="monthly">Ежемесячно</button>
+                    <button class="tab-btn" data-tab="weekly">Еженедельно</button>
+                </div>
+                <div class="leaderboard-content">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Место</th>
+                                <th>Игрок</th>
+                                <th>Результат</th>
+                                <th>Время</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Алексей Смирнов</td>
+                                <td>5/5</td>
+                                <td>22 сек</td>
+                                <td>18 янв 2026</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Мария Иванова</td>
+                                <td>5/5</td>
+                                <td>24 сек</td>
+                                <td>20 янв 2026</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Дмитрий Козлов</td>
+                                <td>5/5</td>
+                                <td>26 сек</td>
+                                <td>22 янв 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../tutorials.html">Видео</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/challenges/generator.js"></script>
+    <script src="../../js/challenges/timer.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы челленджа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                '5 трехочковых бросков за 30 секунд - Челленджи - BasketGuide',
+                'Челлендж: 5 трехочковых бросков за 30 секунд. Проверьте свою скорость и точность в этом испытании баскетбольных навыков',
+                ['баскетбол', 'челлендж', 'трехочковые', 'броски', 'скорость', 'точность', 'навыки']
+            );
+        });
+        
+        // Функция для запуска таймера челленджа
+        function startChallengeTimer() {
+            let seconds = 30;
+            const timerDisplay = document.getElementById('timer');
+            
+            const timerInterval = setInterval(() => {
+                seconds--;
+                timerDisplay.textContent = `00:${seconds.toString().padStart(2, '0')}`;
+                
+                if (seconds <= 0) {
+                    clearInterval(timerInterval);
+                    timerDisplay.textContent = 'Время вышло!';
+                    alert('Время выполнения челленджа истекло!');
+                }
+            }, 1000);
+        }
+        
+        // Функция для поделиться результатом
+        function shareResult() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Мой результат в челлендже 5 трехочковых за 30 секунд',
+                    text: 'Я прошел челлендж на BasketGuide! Попробуйте и вы!',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                // Резервный вариант для браузеров без Web Share API
+                navigator.clipboard.writeText(window.location.href);
+                alert('Ссылка скопирована в буфер обмена');
+            }
+        }
+        
+        // Функция для генерации QR-кода
+        function generateQRCode() {
+            alert('В реальном приложении здесь будет сгенерирован QR-код для вызова друзей на этот челлендж');
+        }
+        
+        // Обработчик формы отслеживания прогресса
+        document.getElementById('challenge-tracking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // В реальном приложении здесь будет сохранение результата
+            alert(`Результат сохранен: ${data.get('made')}/5 попаданий за ${data.get('time-taken')} секунд`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

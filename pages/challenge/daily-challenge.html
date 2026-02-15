@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Челлендж дня - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ежедневный баскетбольный челлендж для улучшения ваших навыков. Новые испытания каждый день">
+    <meta name="keywords" content="баскетбол, ежедневный челлендж, навыки, тренировки, испытания">
+    <link rel="canonical" href="https://basketguide.ru/challenges/daily-challenge">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Челлендж дня - BasketGuide">
+    <meta property="og:description" content="Ежедневный баскетбольный челлендж для улучшения ваших навыков. Новые испытания каждый день">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://basketguide.ru/challenges/daily-challenge">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Челлендж дня - BasketGuide">
+    <meta name="twitter:description" content="Ежедневный баскетбольный челлендж для улучшения ваших навыков">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html" class="active"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../tutorials.html"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="challenge-hero">
+            <div class="container">
+                <h1>Челлендж дня</h1>
+                <p>Ежедневное испытание для улучшения ваших баскетбольных навыков</p>
+            </div>
+        </section>
+
+        <section class="challenge-content">
+            <div class="container">
+                <div class="daily-challenge-container">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">
+                            <i class="fas fa-calendar-day fa-3x"></i>
+                        </div>
+                        <div class="challenge-info">
+                            <h2>Сегодняшний челлендж</h2>
+                            <h3 id="challenge-title">Сделайте 20 бросков из 5 разных точек</h3>
+                            <p id="challenge-description">Попробуйте сделать по 4 броска из 5 разных точек площадки. Цель - достичь 50% попаданий.</p>
+                            
+                            <div class="challenge-meta">
+                                <span class="difficulty medium">Средний</span>
+                                <span class="type skill">Навыки</span>
+                                <span class="participants">124 участника сегодня</span>
+                            </div>
+                            
+                            <div class="challenge-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value" id="completion-rate">67%</span>
+                                    <span class="stat-label">Выполнили</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value" id="avg-score">7.2/10</span>
+                                    <span class="stat-label">Средний результат</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-actions">
+                            <button class="btn btn-primary" onclick="startDailyChallenge()">Начать челлендж</button>
+                            <button class="btn btn-secondary" onclick="showInstructions()">Инструкции</button>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-history">
+                        <h3>Предыдущие челленджи</h3>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <span class="date">5 февраля</span>
+                                <span class="challenge">10 штрафных подряд</span>
+                                <span class="result">Выполнили 78% участников</span>
+                            </div>
+                            <div class="history-item">
+                                <span class="date">4 февраля</span>
+                                <span class="challenge">Ведение между 6 конусами за 30 сек</span>
+                                <span class="result">Выполнили 65% участников</span>
+                            </div>
+                            <div class="history-item">
+                                <span class="date">3 февраля</span>
+                                <span class="challenge">5 данков подряд (виртуально)</span>
+                                <span class="result">Выполнили 23% участников</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-leaderboard">
+                        <h3>Лучшие результаты сегодня</h3>
+                        <table class="leaderboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Место</th>
+                                    <th>Игрок</th>
+                                    <th>Результат</th>
+                                    <th>Время</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Алексей К.</td>
+                                    <td>9/10</td>
+                                    <td>14:22</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Мария П.</td>
+                                    <td>8/10</td>
+                                    <td>15:45</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Дмитрий С.</td>
+                                    <td>8/10</td>
+                                    <td>16:30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../tutorials.html">Видео</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы челленджа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Челлендж дня - BasketGuide',
+                'Ежедневный баскетбольный челлендж для улучшения ваших навыков. Новые испытания каждый день',
+                ['баскетбол', 'ежедневный челлендж', 'навыки', 'тренировки', 'испытания']
+            );
+        });
+
+        function startDailyChallenge() {
+            alert('Челлендж дня начат!');
+            // Здесь будет логика начала челленджа
+        }
+
+        function showInstructions() {
+            alert('Инструкции по выполнению челленджа дня');
+            // Здесь будет отображение инструкций
+        }
+
+        // Функция для обновления информации о челлендже
+        function updateChallengeInfo() {
+            // В реальном приложении здесь будет загрузка информации о текущем челлендже дня
+            // Пока что просто обновляем дату
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('challenge-date').textContent = today.toLocaleDateString('ru-RU', options);
+        }
+
+        // Обновляем информацию при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            updateChallengeInfo();
+        });
+    </script>
+</body>
+</html>

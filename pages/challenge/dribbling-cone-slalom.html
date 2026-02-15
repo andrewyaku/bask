@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ведение мяча между конусами - Челленджи - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Челлендж: ведение мяча между конусами. Проверьте свои навыки дриблинга и ловкость в этом испытании баскетбольных навыков">
+    <meta name="keywords" content="баскетбол, челлендж, ведение мяча, дриблинг, ловкость, навыки">
+    <link rel="canonical" href="https://basketguide.ru/challenges/dribbling-cone-slalom">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Ведение мяча между конусами - Челленджи - BasketGuide">
+    <meta property="og:description" content="Челлендж: ведение мяча между конусами. Проверьте свои навыки дриблинга и ловкость в этом испытании баскетбольных навыков">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/challenges/dribbling-cone-slalom">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ведение мяча между конусами - Челленджи - BasketGuide">
+    <meta name="twitter:description" content="Челлендж: ведение мяча между конусами. Проверьте свои навыки дриблинга в баскетболе">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html" class="active"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../tutorials.html"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="challenge-hero">
+            <div class="container">
+                <h1>Ведение мяча между конусами</h1>
+                <p>Проверьте свои навыки дриблинга и ловкость в этом испытании</p>
+            </div>
+        </section>
+
+        <section class="challenge-content">
+            <div class="container">
+                <div class="challenge-wrapper">
+                    <div class="challenge-info">
+                        <div class="challenge-meta">
+                            <span class="difficulty easy">Легкий</span>
+                            <span class="type skill">Навыки</span>
+                            <span class="time-limit">Нет ограничения</span>
+                        </div>
+                        
+                        <h2>Описание челленджа</h2>
+                        <p>Ваша задача - пройти дистанцию между конусами, ведя мяч, за минимальное время без ошибок. Установите 5-6 конусов в ряд на расстоянии 1 метр друг от друга. Ведите мяч между конусами, не сбивая их и не теряя контроля над мячом.</p>
+                        
+                        <h3>Инструкции:</h3>
+                        <ol>
+                            <li>Установите 5-6 конусов в ряд на расстоянии 1 метр друг от друга</li>
+                            <li>Встаньте перед первым конусом с мячом</li>
+                            <li>Начните вести мяч между конусами, не сбивая их</li>
+                            <li>Пройдите всю дистанцию без потерь мяча</li>
+                            <li>Цель: пройти дистанцию за минимальное время без ошибок</li>
+                        </ol>
+                        
+                        <h3>Советы для успеха:</h3>
+                        <ul>
+                            <li>Держите мяч низко и используйте ладони, а не пальцы</li>
+                            <li>Смотрите вперед, а не на мяч</li>
+                            <li>Используйте корпус для защиты мяча</li>
+                            <li>Поддерживайте постоянный ритм ведения</li>
+                        </ul>
+                        
+                        <div class="challenge-timer" id="challenge-timer">
+                            <h3>Таймер выполнения:</h3>
+                            <div class="timer-display" id="timer">Не запущен</div>
+                            <button class="btn btn-primary" onclick="startChallengeTimer()">Начать выполнение</button>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-interaction">
+                        <div class="challenge-form">
+                            <h3>Отслеживание прогресса</h3>
+                            <form id="challenge-tracking-form">
+                                <div class="form-group">
+                                    <label for="time-taken">Время выполнения (сек)</label>
+                                    <input type="number" id="time-taken" name="time-taken" class="form-control" min="0" step="0.1" placeholder="Время в секундах">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="mistakes">Количество ошибок</label>
+                                    <input type="number" id="mistakes" name="mistakes" class="form-control" min="0" max="10" value="0">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="hand-used">Используемая рука</label>
+                                    <select id="hand-used" name="hand-used" class="form-control">
+                                        <option value="dominant">Ведущая рука</option>
+                                        <option value="non-dominant">Неведущая рука</option>
+                                        <option value="both">Обе руки</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="result-notes">Комментарии</label>
+                                    <textarea id="result-notes" name="result-notes" class="form-control" rows="3" placeholder="Заметки о выполнении челленджа"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Сохранить результат</button>
+                            </form>
+                        </div>
+                        
+                        <div class="challenge-stats">
+                            <h3>Статистика челленджа</h3>
+                            <div class="stat-item">
+                                <span class="stat-label">Участники:</span>
+                                <span class="stat-value">2,345</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Успешных завершений:</span>
+                                <span class="stat-value">68%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Лучший результат:</span>
+                                <span class="stat-value">15.3 сек без ошибок</span>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-share">
+                            <h3>Поделиться результатом</h3>
+                            <button class="btn btn-secondary" onclick="shareResult()">
+                                <i class="fas fa-share-alt"></i> Поделиться
+                            </button>
+                            <button class="btn btn-secondary" onclick="generateQRCode()">
+                                <i class="fas fa-qrcode"></i> QR-код вызова
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-related-content">
+            <div class="container">
+                <h2>Связанный контент</h2>
+                <div class="related-content-grid">
+                    <div class="related-section">
+                        <h3>Связанные правила</h3>
+                        <ul>
+                            <li><a href="../rule/double-dribble.html" class="related-link">Двойной дриблинг</a></li>
+                            <li><a href="../rule/traveling.html" class="related-link">Пробежка</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные калькуляторы</h3>
+                        <ul>
+                            <li><a href="../calculator/player-position.html" class="related-link">Позиция игрока</a></li>
+                            <li><a href="../calculator/ball-size.html" class="related-link">Размер мяча</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные тренировочные планы</h3>
+                        <ul>
+                            <li><a href="../plan/dribbling-improvement.html" class="related-link">Улучшение ведения мяча</a></li>
+                            <li><a href="../plan/basketball-basics-1month.html" class="related-link">Тренировки для новичков</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные видео</h3>
+                        <ul>
+                            <li><a href="../tutorial/dribbling-basics.html" class="related-link">Основы ведения мяча</a></li>
+                            <li><a href="../tutorial/advanced-dribbling.html" class="related-link">Продвинутые техники дриблинга</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-leaderboard">
+            <div class="container">
+                <h2>Таблица лидеров</h2>
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-tab="overall">Общий рейтинг</button>
+                    <button class="tab-btn" data-tab="monthly">Ежемесячно</button>
+                    <button class="tab-btn" data-tab="weekly">Еженедельно</button>
+                </div>
+                <div class="leaderboard-content">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Место</th>
+                                <th>Игрок</th>
+                                <th>Время</th>
+                                <th>Ошибки</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Антон Волков</td>
+                                <td>15.3 сек</td>
+                                <td>0</td>
+                                <td>28 янв 2026</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Елена Морозова</td>
+                                <td>16.1 сек</td>
+                                <td>0</td>
+                                <td>27 янв 2026</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Павел Кузнецов</td>
+                                <td>17.2 сек</td>
+                                <td>0</td>
+                                <td>25 янв 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../tutorials.html">Видео</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/challenges/generator.js"></script>
+    <script src="../../js/challenges/timer.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы челленджа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Ведение мяча между конусами - Челленджи - BasketGuide',
+                'Челлендж: ведение мяча между конусами. Проверьте свои навыки дриблинга и ловкость в этом испытании баскетбольных навыков',
+                ['баскетбол', 'челлендж', 'ведение мяча', 'дриблинг', 'ловкость', 'навыки']
+            );
+        });
+        
+        // Функция для запуска таймера челленджа
+        function startChallengeTimer() {
+            alert('Таймер запущен! В реальном приложении здесь будет функционал для отслеживания времени выполнения челленджа.');
+        }
+        
+        // Функция для поделиться результатом
+        function shareResult() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Мой результат в челлендже ведения мяча',
+                    text: 'Я прошел челлендж ведения мяча между конусами на BasketGuide! Попробуйте и вы!',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                // Резервный вариант для браузеров без Web Share API
+                navigator.clipboard.writeText(window.location.href);
+                alert('Ссылка скопирована в буфер обмена');
+            }
+        }
+        
+        // Функция для генерации QR-кода
+        function generateQRCode() {
+            alert('В реальном приложении здесь будет сгенерирован QR-код для вызова друзей на этот челлендж');
+        }
+        
+        // Обработчик формы отслеживания прогресса
+        document.getElementById('challenge-tracking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // В реальном приложении здесь будет сохранение результата
+            alert(`Результат сохранен: ${data.get('time-taken')} сек, ${data.get('mistakes')} ошибок`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

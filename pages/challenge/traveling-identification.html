@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Определите 10 пробежек - Челленджи - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Интерактивный челлендж: определите 10 случаев пробежки в видео. Проверьте свои знания правил баскетбола">
+    <meta name="keywords" content="баскетбол, челлендж, пробежка, правило, судейство, обучение">
+    <link rel="canonical" href="https://basketguide.ru/pages/challenge/traveling-identification.html">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Определите 10 пробежек - Челленджи - BasketGuide">
+    <meta property="og:description" content="Интерактивный челлендж: определите 10 случаев пробежки в видео. Проверьте свои знания правил баскетбола">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/pages/challenge/traveling-identification.html">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Определите 10 пробежек - Челленджи - BasketGuide">
+    <meta name="twitter:description" content="Интерактивный челлендж: определите 10 случаев пробежки в видео. Проверьте свои знания правил баскетбола">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html" class="active"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="challenge-hero">
+            <div class="container">
+                <h1>Определите 10 пробежек</h1>
+                <p>Просмотрите видео и укажите, где произошла пробежка</p>
+            </div>
+        </section>
+
+        <section class="challenge-content">
+            <div class="container">
+                <div class="challenge-wrapper">
+                    <div class="challenge-info">
+                        <div class="challenge-meta">
+                            <span class="difficulty medium">Средний</span>
+                            <span class="type rules">Знание правил</span>
+                            <span class="time-limit">10 минут</span>
+                        </div>
+                        
+                        <h2>Описание челленджа</h2>
+                        <p>В этом интерактивном челлендже вы просмотрите видео с игровыми ситуациями и должны будете определить 10 случаев пробежки. Это поможет улучшить ваше понимание правила пробежки и развитие навыков судейства.</p>
+                        
+                        <h3>Как проходить челлендж:</h3>
+                        <ol>
+                            <li>Просмотрите каждую игровую ситуацию</li>
+                            <li>Определите, является ли это пробежкой или нет</li>
+                            <li>Объясните свое решение</li>
+                            <li>Сравните с правильным ответом</li>
+                        </ol>
+                        
+                        <div class="challenge-rules-reference">
+                            <h3>Справочная информация:</h3>
+                            <a href="../rule/traveling.html" class="btn btn-secondary">Правило пробежки</a>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-interactive">
+                        <div class="video-challenge-container">
+                            <div class="challenge-video">
+                                <video controls>
+                                    <source src="../../assets/videos/traveling-examples.mp4" type="video/mp4">
+                                    Ваш браузер не поддерживает видео.
+                                </video>
+                            </div>
+                            
+                            <div class="challenge-questions">
+                                <h3>Ситуации для анализа:</h3>
+                                
+                                <div class="question-card">
+                                    <div class="question-header">
+                                        <span class="question-number">Ситуация 1</span>
+                                        <button class="btn btn-primary" onclick="toggleAnswer(1)">Показать ответ</button>
+                                    </div>
+                                    <div class="question-content" id="answer-1" style="display: none;">
+                                        <p><strong>Ответ:</strong> Это была пробежка. Игрок сделал 3 шага после остановки ведения мяча.</p>
+                                        <p><strong>Объяснение:</strong> После остановки ведения мяча игрок может сделать только 2 шага перед броском или передачей.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="question-card">
+                                    <div class="question-header">
+                                        <span class="question-number">Ситуация 2</span>
+                                        <button class="btn btn-primary" onclick="toggleAnswer(2)">Показать ответ</button>
+                                    </div>
+                                    <div class="question-content" id="answer-2" style="display: none;">
+                                        <p><strong>Ответ:</strong> Это не было пробежкой. Игрок правильно исполнил остановку.</p>
+                                        <p><strong>Объяснение:</strong> Игрок совершил правильную остановку с двумя шагами после ловли мяча.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Другие ситуации будут добавлены по аналогии -->
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-actions">
+                            <button class="btn btn-primary" onclick="startChallenge()">Начать челлендж</button>
+                            <button class="btn btn-secondary" onclick="showResults()">Проверить результаты</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-related-content">
+            <div class="container">
+                <h2>Связанный контент</h2>
+                <div class="related-content-grid">
+                    <div class="related-section">
+                        <h3>Связанные правила</h3>
+                        <ul>
+                            <li><a href="../rule/double-dribble.html" class="related-link">Двойной дриблинг</a></li>
+                            <li><a href="../rule/foul.html" class="related-link">Фол</a></li>
+                            <li><a href="../rule/backcourt-violation.html" class="related-link">Нарушение задней зоны</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные калькуляторы</h3>
+                        <ul>
+                            <li><a href="../calculator/player-position.html" class="related-link">Позиция игрока</a></li>
+                            <li><a href="../calculator/player-index.html" class="related-link">Индекс эффективности игрока</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные тренировочные планы</h3>
+                        <ul>
+                            <li><a href="../plan/rules-learning-plan.html" class="related-link">План изучения правил</a></li>
+                            <li><a href="../plan/beginner-training-1month.html" class="related-link">Тренировки для новичков</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/challenges/generator.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы челленджа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Определите 10 пробежек - Челленджи - BasketGuide',
+                'Интерактивный челлендж: определите 10 случаев пробежки в видео. Проверьте свои знания правил баскетбола',
+                ['баскетбол', 'челлендж', 'пробежка', 'правило', 'судейство', 'обучение']
+            );
+        });
+
+        // Функция для переключения отображения ответа
+        function toggleAnswer(questionNumber) {
+            const answerElement = document.getElementById(`answer-${questionNumber}`);
+            if (answerElement.style.display === 'none') {
+                answerElement.style.display = 'block';
+            } else {
+                answerElement.style.display = 'none';
+            }
+        }
+
+        // Функция для начала челленджа
+        function startChallenge() {
+            alert('Челлендж начался! Просмотрите видео и ответьте на вопросы.');
+        }
+
+        // Функция для показа результатов
+        function showResults() {
+            alert('Результаты челленджа отображаются здесь.');
+        }
+    </script>
+</body>
+</html>

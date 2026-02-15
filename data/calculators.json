@@ -1,0 +1,627 @@
+{
+  "calculators": [
+    {
+      "id": "ball-size",
+      "title": "Размер баскетбольного мяча",
+      "slug": "ball-size",
+      "description": "Выберите подходящий размер мяча в зависимости от возраста, пола и условий игры",
+      "inputs": [
+        {
+          "name": "age",
+          "label": "Возраст",
+          "type": "number",
+          "min": 4,
+          "max": 80,
+          "placeholder": "Введите возраст"
+        },
+        {
+          "name": "gender",
+          "label": "Пол",
+          "type": "select",
+          "options": [
+            { "value": "male", "label": "Мужской" },
+            { "value": "female", "label": "Женский" },
+            { "value": "any", "label": "Любой" }
+          ]
+        },
+        {
+          "name": "location",
+          "label": "Условия игры",
+          "type": "select",
+          "options": [
+            { "value": "indoor", "label": "В зале" },
+            { "value": "outdoor", "label": "На улице" },
+            { "value": "any", "label": "Любые" }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "condition": "age < 8",
+          "size": 3,
+          "diameterInches": 22,
+          "diameterCm": 56,
+          "circumferenceInches": 22,
+          "circumferenceCm": 56,
+          "weightOunces": 10,
+          "weightGrams": 280,
+          "explanation": "Размер 3 (22 дюйма) - для детей младше 8 лет",
+          "alternatives": []
+        },
+        {
+          "condition": "age < 12",
+          "size": 5,
+          "diameterInches": 27.5,
+          "diameterCm": 70,
+          "circumferenceInches": 27.5,
+          "circumferenceCm": 70,
+          "weightOunces": 17,
+          "weightGrams": 480,
+          "explanation": "Размер 5 (27.5 дюйма) - для детей до 12 лет",
+          "alternatives": []
+        },
+        {
+          "condition": "age < 15 && gender === 'female'",
+          "size": 6,
+          "diameterInches": 28.5,
+          "diameterCm": 72,
+          "circumferenceInches": 28.5,
+          "circumferenceCm": 72,
+          "weightOunces": 18,
+          "weightGrams": 510,
+          "explanation": "Размер 6 (28.5 дюйма) - для девочек до 15 лет и женщин",
+          "alternatives": []
+        },
+        {
+          "condition": "age < 15 && gender !== 'female'",
+          "size": 5,
+          "diameterInches": 27.5,
+          "diameterCm": 70,
+          "circumferenceInches": 27.5,
+          "circumferenceCm": 70,
+          "weightOunces": 17,
+          "weightGrams": 480,
+          "explanation": "Размер 5 (27.5 дюйма) - для мальчиков до 15 лет",
+          "alternatives": []
+        },
+        {
+          "condition": "age >= 15 && gender === 'female'",
+          "size": 6,
+          "diameterInches": 28.5,
+          "diameterCm": 72,
+          "circumferenceInches": 28.5,
+          "circumferenceCm": 72,
+          "weightOunces": 18,
+          "weightGrams": 510,
+          "explanation": "Размер 6 (28.5 дюйма) - стандартный женский мяч",
+          "alternatives": []
+        },
+        {
+          "condition": "age >= 15 && gender !== 'female'",
+          "size": 7,
+          "diameterInches": 29.5,
+          "diameterCm": 75,
+          "circumferenceInches": 29.5,
+          "circumferenceCm": 75,
+          "weightOunces": 22,
+          "weightGrams": 624,
+          "explanation": "Размер 7 (29.5 дюйма) - стандартный мужской мяч",
+          "alternatives": []
+        }
+      ],
+      "relatedRules": ["traveling", "dribbling"],
+      "relatedChallenges": ["dribbling-challenge"],
+      "relatedPlans": ["beginner-plan"],
+      "keywords": ["размер мяча", "выбор мяча", "баскетбольный мяч", "детский мяч", "подростковый мяч"]
+    },
+    {
+      "id": "hoop-height",
+      "title": "Высота баскетбольного кольца и расстояние до трехочковой линии",
+      "slug": "hoop-height",
+      "description": "Узнайте правильную высоту кольца и расстояние до трехочковой линии в зависимости от возраста и лиги",
+      "inputs": [
+        {
+          "name": "age",
+          "label": "Возраст",
+          "type": "number",
+          "min": 4,
+          "max": 80,
+          "placeholder": "Введите возраст"
+        },
+        {
+          "name": "league",
+          "label": "Лига",
+          "type": "select",
+          "options": [
+            { "value": "fib", "label": "FIBA" },
+            { "value": "nba", "label": "NBA" },
+            { "value": "youth", "label": "Молодежная" },
+            { "value": "recreational", "label": "Любительская" }
+          ]
+        },
+        {
+          "name": "courtType",
+          "label": "Тип площадки",
+          "type": "select",
+          "options": [
+            { "value": "indoor", "label": "Зал" },
+            { "value": "outdoor", "label": "Улица" },
+            { "value": "any", "label": "Любая" }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "condition": "age < 8",
+          "hoopHeightFeet": 8,
+          "hoopHeightInches": 96,
+          "hoopHeightMeters": 2.44,
+          "threePointDistanceFeet": 0,
+          "threePointDistanceMeters": 0,
+          "explanation": "Для детей до 7 лет рекомендуется высота 8 футов (2.44 м). Трехочковая линия обычно не используется.",
+          "alternatives": []
+        },
+        {
+          "condition": "age < 11",
+          "hoopHeightFeet": 9,
+          "hoopHeightInches": 108,
+          "hoopHeightMeters": 2.74,
+          "threePointDistanceFeet": 0,
+          "threePointDistanceMeters": 0,
+          "explanation": "Для детей 8-10 лет рекомендуется высота 9 футов (2.74 м). Трехочковая линия может использоваться на расстоянии 19 футов.",
+          "alternatives": []
+        },
+        {
+          "condition": "age < 14",
+          "hoopHeightFeet": 9,
+          "hoopHeightInches": 108,
+          "hoopHeightMeters": 2.74,
+          "threePointDistanceFeet": 19.75,
+          "threePointDistanceMeters": 6.02,
+          "explanation": "Для подростков до 13 лет (девочки до 15) высота 9 футов (2.74 м), трехочковая линия на расстоянии 19.75 футов (6.02 м).",
+          "alternatives": []
+        },
+        {
+          "condition": "age >= 14 && league === 'nba'",
+          "hoopHeightFeet": 10,
+          "hoopHeightInches": 120,
+          "hoopHeightMeters": 3.05,
+          "threePointDistanceFeet": 23.75,
+          "threePointDistanceMeters": 7.24,
+          "explanation": "В NBA высота кольца 10 футов (3.05 м), трехочковая линия на расстоянии 23.75 футов (7.24 м) в углах.",
+          "alternatives": []
+        },
+        {
+          "condition": "age >= 14 && league === 'fib'",
+          "hoopHeightFeet": 10,
+          "hoopHeightInches": 120,
+          "hoopHeightMeters": 3.05,
+          "threePointDistanceFeet": 22.15,
+          "threePointDistanceMeters": 6.75,
+          "explanation": "По правилам FIBA высота кольца 10 футов (3.05 м), трехочковая линия на расстоянии 22.15 футов (6.75 м).",
+          "alternatives": []
+        },
+        {
+          "condition": "age >= 14",
+          "hoopHeightFeet": 10,
+          "hoopHeightInches": 120,
+          "hoopHeightMeters": 3.05,
+          "threePointDistanceFeet": 22.15,
+          "threePointDistanceMeters": 6.75,
+          "explanation": "Стандартная высота 10 футов (3.05 м), трехочковая линия на расстоянии 22.15 футов (6.75 м) по международным правилам.",
+          "alternatives": []
+        }
+      ],
+      "relatedRules": ["out-of-bounds", "three-point-rule"],
+      "relatedChallenges": ["shooting-challenge"],
+      "relatedPlans": ["shooting-plan"],
+      "keywords": ["высота кольца", "трехочковая линия", "баскетбольная площадка", "размеры площадки"]
+    },
+    {
+      "id": "player-position",
+      "title": "Определение позиции игрока",
+      "slug": "player-position",
+      "description": "Узнайте, какая позиция на площадке наиболее подходит вам, исходя из ваших физических данных и навыков",
+      "inputs": [
+        {
+          "name": "height",
+          "label": "Рост (см)",
+          "type": "number",
+          "min": 100,
+          "max": 250,
+          "placeholder": "Введите рост в см"
+        },
+        {
+          "name": "speed",
+          "label": "Скорость (1-10)",
+          "type": "range",
+          "min": 1,
+          "max": 10,
+          "value": 5
+        },
+        {
+          "name": "jumping",
+          "label": "Прыгучесть (1-10)",
+          "type": "range",
+          "min": 1,
+          "max": 10,
+          "value": 5
+        },
+        {
+          "name": "experience",
+          "label": "Опыт (1-10)",
+          "type": "range",
+          "min": 1,
+          "max": 10,
+          "value": 5
+        },
+        {
+          "name": "shooting",
+          "label": "Бросок (1-10)",
+          "type": "range",
+          "min": 1,
+          "max": 10,
+          "value": 5
+        },
+        {
+          "name": "defense",
+          "label": "Защита (1-10)",
+          "type": "range",
+          "min": 1,
+          "max": 10,
+          "value": 5
+        }
+      ],
+      "results": [
+        {
+          "condition": "height < 180 && speed >= 7 && shooting >= 6",
+          "position": "Разыгрывающий защитник",
+          "positionCode": "PG",
+          "description": "Ключевой организатор атак, должен обладать отличным зрением площадки, навыками передачи и управления мячом",
+          "roleRecommendations": ["Организация атак", "Плеймейкинг", "Трехочковые броски"],
+          "skillRequirements": ["Передачи", "Ведение мяча", "Скорость", "Тактическое мышление"],
+          "explanation": "Ваши скорость и навыки броска делают вас идеальным кандидатом на позицию разыгрывающего защитника.",
+          "alternatives": ["Атакующий защитник"]
+        },
+        {
+          "condition": "height < 180 && speed >= 6",
+          "position": "Атакующий защитник",
+          "positionCode": "SG",
+          "description": "Игрок, специализирующийся на атакующих действиях, часто является вторым разыгрывающим",
+          "roleRecommendations": ["Периметровая атака", "Защита", "Броски с дистанции"],
+          "skillRequirements": ["Бросок", "Защита", "Скорость", "Финиш"],
+          "explanation": "Ваша скорость и универсальность позволяют эффективно действовать на позиции атакующего защитника.",
+          "alternatives": ["Разыгрывающий защитник"]
+        },
+        {
+          "condition": "height < 180",
+          "position": "Скоростной защитник",
+          "positionCode": "SPG",
+          "description": "Игрок, специализирующийся на оборонительных действиях и быстрых контратаках",
+          "roleRecommendations": ["Перехваты", "Контратаки", "Блоки"],
+          "skillRequirements": ["Скорость", "Реакция", "Защита", "Ловкость"],
+          "explanation": "Ваша компактная комплектация позволяет быть эффективным в защите и быстрых атаках.",
+          "alternatives": ["Атакующий защитник"]
+        },
+        {
+          "condition": "height >= 180 && height < 195 && jumping >= 7 && speed >= 6 && shooting >= 6",
+          "position": "Атакующий защитник",
+          "positionCode": "SG",
+          "description": "Универсальный периметровый игрок, способный атаковать с разных позиций",
+          "roleRecommendations": ["Атака с фланга", "Трехочковые броски", "Защита"],
+          "skillRequirements": ["Бросок", "Ведение", "Защита", "Подвижность"],
+          "explanation": "Ваша комбинация роста, скорости и навыков броска идеально подходит для позиции атакующего защитника.",
+          "alternatives": ["Легкий форвард"]
+        },
+        {
+          "condition": "height >= 180 && height < 195 && jumping >= 6 && shooting >= 7",
+          "position": "Легкий форвард",
+          "positionCode": "SF",
+          "description": "Переходная фигура между защитниками и форвардами, универсальный scorer",
+          "roleRecommendations": ["Атака в движении", "Броски", "Подборы"],
+          "skillRequirements": ["Бросок", "Подвижность", "Подбор", "Защита"],
+          "explanation": "Ваш рост и навыки броска делают вас идеальным кандидатом на позицию легкого форварда.",
+          "alternatives": ["Атакующий защитник"]
+        },
+        {
+          "condition": "height >= 180 && height < 195 && defense >= 7",
+          "position": "Переходный фланг",
+          "positionCode": "GSF",
+          "description": "Игрок, специализирующийся на противодействии периметровым атакующим",
+          "roleRecommendations": ["Персональная защита", "Трехочковая защита", "Перехваты"],
+          "skillRequirements": ["Реакция", "Скорость", "Интеллект", "Подбор"],
+          "explanation": "Ваши защитные навыки и рост позволяют эффективно защищать периметр.",
+          "alternatives": ["Легкий форвард"]
+        },
+        {
+          "condition": "height >= 180 && height < 195",
+          "position": "Малый форвард",
+          "positionCode": "PF",
+          "description": "Универсальный фланг, способный действовать как в зоне, так и на периметре",
+          "roleRecommendations": ["Финиш в зоне", "Средние броски", "Подборы"],
+          "skillRequirements": ["Подбор", "Финиш", "Защита", "Средний бросок"],
+          "explanation": "Ваша универсальность позволяет играть как на фланге, так и в центре.",
+          "alternatives": ["Легкий форвард"]
+        },
+        {
+          "condition": "height >= 195 && jumping >= 8 && speed >= 6 && shooting >= 6",
+          "position": "Тяжелый форвард",
+          "positionCode": "PF",
+          "description": "Мобильный центровой, способный действовать на всей площадке",
+          "roleRecommendations": ["Подвижность в зоне", "Средние броски", "Блоки"],
+          "skillRequirements": ["Подвижность", "Средний бросок", "Блок", "Подбор"],
+          "explanation": "Ваша комбинация роста, подвижности и навыков делает вас идеальным тяжелым форвардом.",
+          "alternatives": ["Центровой"]
+        },
+        {
+          "condition": "height >= 195 && jumping >= 7 && shooting >= 7",
+          "position": "Растянутый четырех",
+          "positionCode": "STF",
+          "description": "Высокий игрок с навыками периметровой игры",
+          "roleRecommendations": ["Трехочковые броски", "Пас в движении", "Подборы"],
+          "skillRequirements": ["Трехочковый бросок", "Пас", "Подбор", "Защита"],
+          "explanation": "Ваш рост и навыки периметровой игры позволяют быть 'растянутым' форвардом.",
+          "alternatives": ["Тяжелый форвард"]
+        },
+        {
+          "condition": "height >= 195 && defense >= 7",
+          "position": "Защитный центр",
+          "positionCode": "DNC",
+          "description": "Игрок, специализирующийся на защите корзины и подборах",
+          "roleRecommendations": ["Блоки", "Подборы в защите", "Защита в зоне"],
+          "skillRequirements": ["Блок", "Подбор", "Защита", "Позиционирование"],
+          "explanation": "Ваш рост и защитные навыки делают вас отличным защитным центром.",
+          "alternatives": ["Центровой"]
+        },
+        {
+          "condition": "height >= 195",
+          "position": "Центровой",
+          "positionCode": "C",
+          "description": "Классический центровой, доминирующий в зоне под кольцом",
+          "roleRecommendations": ["Игра под кольцом", "Подборы", "Блоки"],
+          "skillRequirements": ["Финиш под кольцом", "Подбор", "Блок", "Позиционирование"],
+          "explanation": "Ваш рост позволяет доминировать в зоне под кольцом.",
+          "alternatives": ["Тяжелый форвард"]
+        }
+      ],
+      "relatedRules": ["position-substitution", "playing-time"],
+      "relatedChallenges": ["position-specific-challenge"],
+      "relatedPlans": ["position-specific-plan"],
+      "keywords": ["позиция", "баскетбол", "игровая роль", "форвард", "защитник", "центровой"]
+    },
+    {
+      "id": "jump-height",
+      "title": "Вертикальный прыжок и способность к данку",
+      "slug": "jump-height",
+      "description": "Оцените свой вертикальный прыжок и узнайте, насколько вы близки к возможности выполнить данк",
+      "inputs": [
+        {
+          "name": "age",
+          "label": "Возраст",
+          "type": "number",
+          "min": 8,
+          "max": 80,
+          "placeholder": "Введите возраст"
+        },
+        {
+          "name": "currentJump",
+          "label": "Текущий вертикальный прыжок (см)",
+          "type": "number",
+          "min": 0,
+          "max": 150,
+          "placeholder": "Введите высоту прыжка в см"
+        },
+        {
+          "name": "gender",
+          "label": "Пол",
+          "type": "select",
+          "options": [
+            { "value": "male", "label": "Мужской" },
+            { "value": "female", "label": "Женский" },
+            { "value": "any", "label": "Любой" }
+          ]
+        },
+        {
+          "name": "trainingExperience",
+          "label": "Опыт тренировок",
+          "type": "select",
+          "options": [
+            { "value": "beginner", "label": "Новичок" },
+            { "value": "intermediate", "label": "Средний уровень" },
+            { "value": "advanced", "label": "Продвинутый" },
+            { "value": "professional", "label": "Профессионал" }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "condition": "age < 18",
+          "currentJump": "varies",
+          "potentialJump": "varies",
+          "improvementPotential": "high",
+          "dunkProbability": "low-to-medium",
+          "explanation": "В вашем возрасте есть значительный потенциал для улучшения вертикального прыжка благодаря физиологическим особенностям развития.",
+          "alternatives": ["Развитие силы", "Координация", "Техника прыжка"]
+        },
+        {
+          "condition": "age < 25",
+          "currentJump": "varies",
+          "potentialJump": "varies",
+          "improvementPotential": "moderate-high",
+          "dunkProbability": "medium",
+          "explanation": "В молодом возрасте вы имеете хороший потенциал для улучшения вертикального прыжка при правильной тренировке.",
+          "alternatives": ["Плиометрика", "Силовые тренировки", "Взрывная сила"]
+        },
+        {
+          "condition": "age < 35",
+          "currentJump": "varies",
+          "potentialJump": "varies",
+          "improvementPotential": "moderate",
+          "dunkProbability": "medium-to-low",
+          "explanation": "В возрасте до 35 лет вы все еще можете значительно улучшить свой вертикальный прыжок при регулярных тренировках.",
+          "alternatives": ["Взрывная сила", "Гибкость", "Техника"]
+        },
+        {
+          "condition": "age < 45",
+          "currentJump": "varies",
+          "potentialJump": "varies",
+          "improvementPotential": "low-moderate",
+          "dunkProbability": "low",
+          "explanation": "В возрасте до 45 лет потенциал для улучшения ограничен, но при правильной программе тренировок можно добиться улучшения.",
+          "alternatives": ["Поддержание силы", "Гибкость", "Правильная техника"]
+        },
+        {
+          "condition": "age >= 45",
+          "currentJump": "varies",
+          "potentialJump": "varies",
+          "improvementPotential": "low",
+          "dunkProbability": "very low",
+          "explanation": "В возрасте 45+ важно поддерживать физическую форму и безопасность при выполнении прыжков.",
+          "alternatives": ["Поддержание физической формы", "Координация", "Безопасность"]
+        }
+      ],
+      "relatedRules": ["jump-ball", "blocking-foul"],
+      "relatedChallenges": ["vertical-jump-challenge"],
+      "relatedPlans": ["dunk-training-plan"],
+      "keywords": ["вертикальный прыжок", "данк", "прыжок", "атлетизм", "взрывная сила"]
+    },
+    {
+      "id": "player-index",
+      "title": "Индекс эффективности игрока",
+      "slug": "player-index",
+      "description": "Оцените свою производительность на площадке с помощью индекса эффективности игрока",
+      "inputs": [
+        {
+          "name": "points",
+          "label": "Очки",
+          "type": "number",
+          "min": 0,
+          "max": 50,
+          "placeholder": "Количество набранных очков"
+        },
+        {
+          "name": "rebounds",
+          "label": "Подборы",
+          "type": "number",
+          "min": 0,
+          "max": 25,
+          "placeholder": "Количество подборов"
+        },
+        {
+          "name": "assists",
+          "label": "Передачи",
+          "type": "number",
+          "min": 0,
+          "max": 20,
+          "placeholder": "Количество результативных передач"
+        },
+        {
+          "name": "steals",
+          "label": "Перехваты",
+          "type": "number",
+          "min": 0,
+          "max": 10,
+          "placeholder": "Количество перехватов"
+        },
+        {
+          "name": "blocks",
+          "label": "Блоки",
+          "type": "number",
+          "min": 0,
+          "max": 10,
+          "placeholder": "Количество блоков"
+        },
+        {
+          "name": "turnovers",
+          "label": "Потери",
+          "type": "number",
+          "min": 0,
+          "max": 15,
+          "placeholder": "Количество потерь"
+        },
+        {
+          "name": "personalFouls",
+          "label": "Персональные фолы",
+          "type": "number",
+          "min": 0,
+          "max": 6,
+          "placeholder": "Количество фолов"
+        },
+        {
+          "name": "minutes",
+          "label": "Минуты на площадке",
+          "type": "number",
+          "min": 1,
+          "max": 60,
+          "placeholder": "Время в игре"
+        }
+      ],
+      "results": [
+        {
+          "condition": "normalizedEfficiency > 25",
+          "rating": "Выдающийся",
+          "performanceLevel": "Элита",
+          "description": "Очень высокий уровень эффективности, характерный для звезд лиги",
+          "areaOfImprovement": ["Сохранять консистентность", "Развивать лидерские качества"],
+          "comparisonToLeague": "Значительно выше среднего",
+          "explanation": "Ваш уровень эффективности говорит о том, что вы играете на уровне элитных игроков.",
+          "alternatives": ["Развивать лидерские качества", "Помогать товарищам по команде"]
+        },
+        {
+          "condition": "normalizedEfficiency > 15",
+          "rating": "Очень хороший",
+          "performanceLevel": "Профессионал",
+          "description": "Высокий уровень эффективности, выше среднего для профессиональных игроков",
+          "areaOfImprovement": ["Работа над слабыми сторонами", "Фокус на ключевых навыках"],
+          "comparisonToLeague": "Выше среднего",
+          "explanation": "Вы играете на уровне профессиональных игроков, с хорошим балансом между атакой и защитой.",
+          "alternatives": ["Работа над слабыми сторонами", "Улучшение специфических навыков"]
+        },
+        {
+          "condition": "normalizedEfficiency > 10",
+          "rating": "Хороший",
+          "performanceLevel": "Хороший игрок",
+          "description": "Хороший уровень эффективности, выше среднего для любительского уровня",
+          "areaOfImprovement": ["Снижение потерь", "Увеличение подборов"],
+          "comparisonToLeague": "Немного выше среднего",
+          "explanation": "Вы играете выше среднего уровня, с положительным вкладом в успех команды.",
+          "alternatives": ["Увеличение подборов", "Снижение потерь"]
+        },
+        {
+          "condition": "normalizedEfficiency > 5",
+          "rating": "Средний",
+          "performanceLevel": "Средний уровень",
+          "description": "Средний уровень эффективности, типичный для среднего уровня",
+          "areaOfImprovement": ["Улучшение бросков", "Работа с мячом", "Защита"],
+          "comparisonToLeague": "Средний уровень",
+          "explanation": "Ваш вклад в игру в целом соответствует среднему уровню, с возможностями для улучшения.",
+          "alternatives": ["Улучшение атакующих навыков", "Работа над защитой"]
+        },
+        {
+          "condition": "normalizedEfficiency > 0",
+          "rating": "Ниже среднего",
+          "performanceLevel": "Новичок",
+          "description": "Нуждается в улучшении, но есть положительный вклад",
+          "areaOfImprovement": ["Все аспекты игры", "Тренировки", "Опыт"],
+          "comparisonToLeague": "Ниже среднего",
+          "explanation": "Вам нужно поработать над всеми аспектами игры, чтобы улучшить свой вклад в команду.",
+          "alternatives": ["Основы игры", "Тренировки", "Получение опыта"]
+        },
+        {
+          "condition": "normalizedEfficiency <= 0",
+          "rating": "Нуждается в улучшении",
+          "performanceLevel": "Нуждается в развитии",
+          "description": "Отрицательный вклад, требуется серьезная работа над игрой",
+          "areaOfImprovement": ["Все аспекты игры", "Минимизация ошибок", "Базовые навыки"],
+          "comparisonToLeague": "Значительно ниже среднего",
+          "explanation": "Вам требуется серьезная работа над всеми аспектами игры, чтобы начать вносить положительный вклад.",
+          "alternatives": ["Базовые навыки", "Минимизация ошибок", "Индивидуальные тренировки"]
+        }
+      ],
+      "relatedRules": ["playing-time", "substitution"],
+      "relatedChallenges": ["efficiency-challenge"],
+      "relatedPlans": ["all-around-player-plan"],
+      "keywords": ["эффективность", "PER", "статистика", "оценка игрока", "баскетбольная статистика"]
+    }
+  ]
+}

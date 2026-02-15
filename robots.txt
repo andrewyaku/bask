@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://basketguide.ru/sitemap.xml
+
+# Disallow access to certain directories
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Specific pages to exclude
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.xls$
+
+# Rate limiting (crawl delay in seconds)
+Crawl-delay: 5
+
+# Allow major sections
+Allow: /pages/
+Allow: /calculators/
+Allow: /rules/
+Allow: /challenges/
+Allow: /blog/
+Allow: /plans/

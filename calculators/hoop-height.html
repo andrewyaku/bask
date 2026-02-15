@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Высота баскетбольного кольца - Калькуляторы - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Калькулятор высоты баскетбольного кольца и расстояния до трехочковой линии. Узнайте правильные параметры для вашего возраста и лиги">
+    <meta name="keywords" content="баскетбол, калькулятор, высота кольца, расстояние, лига, возраст">
+    <link rel="canonical" href="https://basketguide.ru/calculators/hoop-height">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Высота баскетбольного кольца - Калькуляторы - BasketGuide">
+    <meta property="og:description" content="Калькулятор высоты баскетбольного кольца и расстояния до трехочковой линии. Узнайте правильные параметры для вашего возраста и лиги">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/calculators/hoop-height">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Высота баскетбольного кольца - Калькуляторы - BasketGuide">
+    <meta name="twitter:description" content="Калькулятор высоты баскетбольного кольца. Узнайте правильные параметры для вашего возраста и лиги">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../pages/calculators.html" class="active"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../pages/rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../pages/challenges.html"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../pages/tutorials.html"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="../pages/blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../pages/plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../pages/about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-hero">
+            <div class="container">
+                <h1>Высота баскетбольного кольца и расстояние до трехочковой линии</h1>
+                <p>Узнайте правильную высоту кольца и расстояние до трехочковой линии в зависимости от возраста и лиги</p>
+            </div>
+        </section>
+
+        <section class="calculator-content">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="calculator-form-container">
+                        <form id="hoop-height-calculator" class="calculator-form" data-calculator-id="hoop-height">
+                            <div class="form-group">
+                                <label for="age">Возраст</label>
+                                <input type="number" id="age" name="age" class="form-control" min="4" max="80" placeholder="Введите возраст" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="league">Лига</label>
+                                <select id="league" name="league" class="form-control">
+                                    <option value="fib">FIBA</option>
+                                    <option value="nba">NBA</option>
+                                    <option value="youth">Молодежная</option>
+                                    <option value="recreational" selected>Любительская</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courtType">Тип площадки</label>
+                                <select id="courtType" name="courtType" class="form-control">
+                                    <option value="indoor">В зале</option>
+                                    <option value="outdoor">На улице</option>
+                                    <option value="any" selected>Любая</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Рассчитать высоту</button>
+                            <button type="reset" class="btn btn-secondary">Сбросить</button>
+                        </form>
+                    </div>
+                    
+                    <div class="calculator-info">
+                        <h2>О высоте баскетбольного кольца</h2>
+                        <p>Стандартная высота баскетбольного кольца составляет 10 футов (3,05 метра) для взрослых и профессиональных лиг. Однако для детей и подростков высота может варьироваться:</p>
+                        <ul>
+                            <li><strong>До 8 лет:</strong> 8 футов (2,44 м)</li>
+                            <li><strong>9-11 лет:</strong> 9 футов (2,74 м)</li>
+                            <li><strong>12-15 лет:</strong> 10 футов (3,05 м) или 9 футов (2,74 м) для девочек до 15 лет</li>
+                            <li><strong>15+ лет:</strong> 10 футов (3,05 м)</li>
+                        </ul>
+                        
+                        <h3>Расстояние до трехочковой линии</h3>
+                        <p>Расстояние до трехочковой линии также зависит от лиги:</p>
+                        <ul>
+                            <li><strong>NBA:</strong> 23,75 футов (7,24 м) в углах</li>
+                            <li><strong>FIBA:</strong> 22,15 футов (6,75 м) по всей дуге</li>
+                            <li><strong>Молодежные лиги:</strong> Меньше, в зависимости от возраста</li>
+                        </ul>
+                        
+                        <div class="related-content">
+                            <h3>Связанный контент</h3>
+                            <div class="related-links">
+                                <a href="../pages/rule/out-of-bounds.html" class="related-link">Правило аута</a>
+                                <a href="../pages/challenge/shooting-challenge.html" class="related-link">Челлендж бросков</a>
+                                <a href="../pages/tutorial/shooting-technique.html" class="related-link">Видео: Техника броска</a>
+                                <a href="../pages/plan/shooting-improvement-1month.html" class="related-link">Тренировочный план улучшения бросков</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-features">
+            <div class="container">
+                <h2>Особенности нашего калькулятора</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt fa-2x"></i>
+                        <h3>Быстрый расчет</h3>
+                        <p>Мгновенный результат при вводе параметров</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-globe-americas fa-2x"></i>
+                        <h3>Контекстная информация</h3>
+                        <p>Учитываем лигу (FIBA/NBA), возраст и условия игры</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-link fa-2x"></i>
+                        <h3>Связанный контент</h3>
+                        <p>Каждый расчет связан с соответствующими правилами, челленджами и тренировками</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt fa-2x"></i>
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Работает на любом устройстве - телефоне, планшете или компьютере</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../pages/calculators.html">Калькуляторы</a></li>
+                        <li><a href="../pages/rules.html">Правила</a></li>
+                        <li><a href="../pages/challenges.html">Челленджи</a></li>
+                        <li><a href="../pages/tutorials.html">Видео</a></li>
+                        <li><a href="../pages/blog.html">Блог</a></li>
+                        <li><a href="../pages/about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/calculators/hoopHeight.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы калькулятора
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Высота баскетбольного кольца - Калькуляторы - BasketGuide',
+                'Калькулятор высоты баскетбольного кольца и расстояния до трехочковой линии. Узнайте правильные параметры для вашего возраста и лиги',
+                ['баскетбол', 'калькулятор', 'высота кольца', 'расстояние', 'лига', 'возраст']
+            );
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 штрафных бросков подряд - Челленджи - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Челлендж: 10 штрафных бросков подряд. Проверьте свою точность и выносливость в этом испытании баскетбольных навыков">
+    <meta name="keywords" content="баскетбол, челлендж, штрафные, броски, точность, навыки">
+    <link rel="canonical" href="https://basketguide.ru/challenges/free-throws-10">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="10 штрафных бросков подряд - Челленджи - BasketGuide">
+    <meta property="og:description" content="Челлендж: 10 штрафных бросков подряд. Проверьте свою точность и выносливость в этом испытании баскетбольных навыков">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/challenges/free-throws-10">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="10 штрафных бросков подряд - Челленджи - BasketGuide">
+    <meta name="twitter:description" content="Челлендж: 10 штрафных бросков подряд. Проверьте свои навыки броска в баскетболе">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html" class="active"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../tutorials.html"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="challenge-hero">
+            <div class="container">
+                <h1>10 штрафных бросков подряд</h1>
+                <p>Проверьте свою точность и выносливость в этом испытании баскетбольных навыков</p>
+            </div>
+        </section>
+
+        <section class="challenge-content">
+            <div class="container">
+                <div class="challenge-wrapper">
+                    <div class="challenge-info">
+                        <div class="challenge-meta">
+                            <span class="difficulty medium">Средний</span>
+                            <span class="type skill">Навыки</span>
+                            <span class="time-limit">Нет ограничения</span>
+                        </div>
+                        
+                        <h2>Описание челленджа</h2>
+                        <p>Ваша задача - сделать 10 успешных штрафных бросков подряд. Если вы промахнетесь, вам придется начать счетчик заново. Цель - сделать 10 попаданий подряд с наименьшим количеством промахов.</p>
+                        
+                        <h3>Инструкции:</h3>
+                        <ol>
+                            <li>Встаньте на линию штрафного удара</li>
+                            <li>Выполните бросок и дождитесь результата</li>
+                            <li>Если бросок успешен, продолжайте серию</li>
+                            <li>Если бросок неудачен, начните серию заново</li>
+                            <li>Цель: 10 успешных бросков подряд</li>
+                        </ol>
+                        
+                        <h3>Советы для успеха:</h3>
+                        <ul>
+                            <li>Создайте постоянный ритуал перед каждым броском</li>
+                            <li>Сосредоточьтесь на технике, а не на результате</li>
+                            <li>Дышите ровно и контролируйте нервы</li>
+                            <li>Представляйте себе успешный бросок перед каждым выполнением</li>
+                        </ul>
+                        
+                        <div class="challenge-timer" id="challenge-timer">
+                            <h3>Время выполнения:</h3>
+                            <div class="timer-display">Не начато</div>
+                            <button class="btn btn-primary" onclick="startChallengeTimer()">Начать таймер</button>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-interaction">
+                        <div class="challenge-form">
+                            <h3>Отслеживание прогресса</h3>
+                            <form id="challenge-tracking-form">
+                                <div class="form-group">
+                                    <label for="attempts">Всего попыток</label>
+                                    <input type="number" id="attempts" name="attempts" class="form-control" min="10" value="10">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="made">Реализовано</label>
+                                    <input type="number" id="made" name="made" class="form-control" min="0" max="10" value="0">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="result-notes">Комментарии</label>
+                                    <textarea id="result-notes" name="result-notes" class="form-control" rows="3" placeholder="Заметки о выполнении челленджа"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Сохранить результат</button>
+                            </form>
+                        </div>
+                        
+                        <div class="challenge-stats">
+                            <h3>Статистика челленджа</h3>
+                            <div class="stat-item">
+                                <span class="stat-label">Участники:</span>
+                                <span class="stat-value">1,248</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Успешных завершений:</span>
+                                <span class="stat-value">42%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Лучший результат:</span>
+                                <span class="stat-value">10/10 с 3 промахами</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-related-content">
+            <div class="container">
+                <h2>Связанный контент</h2>
+                <div class="related-content-grid">
+                    <div class="related-section">
+                        <h3>Связанные правила</h3>
+                        <ul>
+                            <li><a href="../rule/foul.html" class="related-link">Фол (Нарушение)</a></li>
+                            <li><a href="../rule/traveling.html" class="related-link">Пробежка</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные калькуляторы</h3>
+                        <ul>
+                            <li><a href="../calculator/player-index.html" class="related-link">Индекс эффективности игрока</a></li>
+                            <li><a href="../calculator/player-position.html" class="related-link">Позиция игрока</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные тренировочные планы</h3>
+                        <ul>
+                            <li><a href="../plan/shooting-improvement-1month.html" class="related-link">Улучшение бросков</a></li>
+                            <li><a href="../plan/basketball-basics-1month.html" class="related-link">Базовые навыки</a></li>
+                        </ul>
+                    </div>
+                    <div class="related-section">
+                        <h3>Связанные видео</h3>
+                        <ul>
+                            <li><a href="../tutorial/shooting-technique.html" class="related-link">Техника броска</a></li>
+                            <li><a href="../tutorial/free-throw-basics.html" class="related-link">Основы штрафных бросков</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenge-leaderboard">
+            <div class="container">
+                <h2>Таблица лидеров</h2>
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-tab="overall">Общий рейтинг</button>
+                    <button class="tab-btn" data-tab="monthly">Ежемесячно</button>
+                    <button class="tab-btn" data-tab="weekly">Еженедельно</button>
+                </div>
+                <div class="leaderboard-content">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Место</th>
+                                <th>Игрок</th>
+                                <th>Результат</th>
+                                <th>Время</th>
+                                <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Иван Петров</td>
+                                <td>10/10 с 2 промахами</td>
+                                <td>3:45</td>
+                                <td>25 янв 2026</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Мария Сидорова</td>
+                                <td>10/10 с 3 промахами</td>
+                                <td>4:12</td>
+                                <td>24 янв 2026</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Алексей Козлов</td>
+                                <td>10/10 с 4 промахами</td>
+                                <td>3:58</td>
+                                <td>23 янв 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../tutorials.html">Видео</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/challenges/generator.js"></script>
+    <script src="../../js/challenges/timer.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы челленджа
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                '10 штрафных бросков подряд - Челленджи - BasketGuide',
+                'Челлендж: 10 штрафных бросков подряд. Проверьте свою точность и выносливость в этом испытании баскетбольных навыков',
+                ['баскетбол', 'челлендж', 'штрафные', 'броски', 'точность', 'навыки']
+            );
+        });
+        
+        // Функция для запуска таймера челленджа
+        function startChallengeTimer() {
+            alert('Таймер запущен! В реальном приложении здесь будет функционал для отслеживания времени выполнения челленджа.');
+        }
+        
+        // Обработчик формы отслеживания прогресса
+        document.getElementById('challenge-tracking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // В реальном приложении здесь будет сохранение результата
+            alert(`Результат сохранен: ${data.made}/10 попаданий`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>

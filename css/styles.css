@@ -1,0 +1,538 @@
+/* Общие стили для BasketGuide */
+
+:root {
+  --primary-color: #FF6B35;
+  --secondary-color: #2E8E8C;
+  --accent-color: #F4D35E;
+  --light-color: #F8F9FA;
+  --dark-color: #212529;
+  --success-color: #28A745;
+  --danger-color: #DC3545;
+  
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+  
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Навигация */
+.navbar {
+  background-color: white;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.logo h1 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  margin-right: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  flex-wrap: nowrap;
+}
+
+.nav-menu li {
+  white-space: nowrap;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: var(--dark-color);
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  min-height: 24px;
+}
+
+.nav-menu li a i {
+  margin-right: 8px;
+}
+
+.nav-menu li a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--dark-color);
+  margin: 3px 0;
+  transition: var(--transition);
+}
+
+/* Главный герой */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Стиль для кнопки сброса в формах */
+.reset-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.reset-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #e6c24d;
+  color: var(--dark-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Особенности */
+.features {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--dark-color);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: var(--light-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-card i {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+/* Популярные калькуляторы */
+.popular-calculators {
+  padding: 80px 0;
+  background-color: #f0f8ff;
+}
+
+.popular-calculators h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--dark-color);
+}
+
+.calculator-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.calc-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--dark-color);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.calc-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  color: var(--dark-color);
+}
+
+.calc-item i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.calc-item h3 {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.calc-item p {
+  color: #6c757d;
+}
+
+/* Футер */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 50px 0 20px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #495057;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #495057;
+  color: #adb5bd;
+}
+
+/* Калькуляторы */
+.calculator-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.calculator-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+.result-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+}
+
+.result-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.related-content {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.related-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.related-content h3 {
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.related-link {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.related-link:hover {
+  background-color: #257a78;
+}
+
+/* Стили для иконок категорий в блоге */
+.blog-meta a.category::before {
+  font-family: "Font Awesome 6 Free";
+  margin-right: 8px;
+  font-weight: 900;
+}
+
+.blog-meta a.category[href*="learning"]::before,
+.blog-meta a.category[href*="beginner"]::before,
+.blog-meta a.category[href*="обучение"]::before {
+  content: "\f0d9"; /* fa-chevron-right */
+  color: var(--primary-color);
+}
+
+.blog-meta a.category[href*="equipment"]::before,
+.blog-meta a.category[href*="gear"]::before,
+.blog-meta a.category[href*="экипировка"]::before {
+  content: "\f02d"; /* fa-shopping-cart */
+  color: var(--secondary-color);
+}
+
+.blog-meta a.category[href*="rules"]::before,
+.blog-meta a.category[href*="правила"]::before {
+  content: "\f022"; /* fa-book */
+  color: var(--accent-color);
+}
+
+.blog-meta a.category[href*="training"]::before,
+.blog-meta a.category[href*="workout"]::before,
+.blog-meta a.category[href*="тренировки"]::before {
+  content: "\f0c0"; /* fa-users */
+  color: var(--success-color);
+}
+
+.blog-meta a.category[href*="health"]::before,
+.blog-meta a.category[href*="здоровье"]::before {
+  content: "\f0c1"; /* fa-heart */
+  color: var(--danger-color);
+}
+
+.blog-meta a.category[href*="psychology"]::before,
+.blog-meta a.category[href*="психология"]::before {
+  content: "\f5dc"; /* fa-brain */
+  color: var(--secondary-color);
+}
+
+.blog-meta a.category[href*="nutrition"]::before,
+.blog-meta a.category[href*="питание"]::before {
+  content: "\f0f5"; /* fa-utensils */
+  color: var(--primary-color);
+}
+
+.blog-meta a.category[href*="history"]::before,
+.blog-meta a.category[href*="история"]::before {
+  content: "\f1da"; /* fa-history */
+  color: var(--accent-color);
+}

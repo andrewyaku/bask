@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Определение позиции игрока - Калькуляторы - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Калькулятор определения позиции игрока в баскетболе. Найдите свою идеальную позицию на площадке исходя из физических данных и навыков">
+    <meta name="keywords" content="баскетбол, калькулятор, позиция игрока, рост, навыки, физические данные">
+    <link rel="canonical" href="https://basketguide.ru/calculators/player-position">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Определение позиции игрока - Калькуляторы - BasketGuide">
+    <meta property="og:description" content="Калькулятор определения позиции игрока в баскетболе. Найдите свою идеальную позицию на площадке исходя из физических данных и навыков">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/calculators/player-position">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Определение позиции игрока - Калькуляторы - BasketGuide">
+    <meta name="twitter:description" content="Калькулятор определения позиции игрока. Узнайте, какая позиция на площадке наиболее подходит вам">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html" class="active"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-hero">
+            <div class="container">
+                <h1>Определение позиции игрока</h1>
+                <p>Найдите свою идеальную позицию на площадке в зависимости от физических данных и навыков</p>
+            </div>
+        </section>
+
+        <section class="calculator-content">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="calculator-form-container">
+                        <form id="player-position-calculator" class="calculator-form" data-calculator-id="player-position">
+                            <div class="form-group">
+                                <label for="height">Рост (см)</label>
+                                <input type="number" id="height" name="height" class="form-control" min="100" max="250" placeholder="Введите рост в см" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="speed">Скорость (1-10)</label>
+                                <input type="range" id="speed" name="speed" class="form-control" min="1" max="10" value="5">
+                                <span id="speed-value">5</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jumping">Прыгучесть (1-10)</label>
+                                <input type="range" id="jumping" name="jumping" class="form-control" min="1" max="10" value="5">
+                                <span id="jumping-value">5</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="shooting">Навыки броска (1-10)</label>
+                                <input type="range" id="shooting" name="shooting" class="form-control" min="1" max="10" value="5">
+                                <span id="shooting-value">5</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="defense">Навыки защиты (1-10)</label>
+                                <input type="range" id="defense" name="defense" class="form-control" min="1" max="10" value="5">
+                                <span id="defense-value">5</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="experience">Игровой опыт (1-10)</label>
+                                <input type="range" id="experience" name="experience" class="form-control" min="1" max="10" value="5">
+                                <span id="experience-value">5</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Определить позицию</button>
+                            <button type="reset" class="btn reset-btn">Сбросить</button>
+                        </form>
+                    </div>
+                    
+                    <div class="calculator-info">
+                        <h2>О позициях в баскетболе</h2>
+                        <p>В баскетболе традиционно выделяют 5 основных позиций:</p>
+                        <ul>
+                            <li><strong>Разыгрывающий защитник (Point Guard, PG)</strong> - организатор атаки команды</li>
+                            <li><strong>Атакующий защитник (Shooting Guard, SG)</strong> - специалист по броскам</li>
+                            <li><strong>Легкий форвард (Small Forward, SF)</strong> - универсальный игрок</li>
+                            <li><strong>Тяжелый форвард (Power Forward, PF)</strong> - игрок в зоне и на периметре</li>
+                            <li><strong>Центровой (Center, C)</strong> - игрок в зоне под кольцом</li>
+                        </ul>
+                        
+                        <h3>Как определяется позиция?</h3>
+                        <p>Позиция игрока определяется на основе сочетания физических данных (рост, скорость, прыгучесть) и навыков (бросок, защита, передачи).</p>
+                        
+                        <div class="related-content">
+                            <h3>Связанный контент</h3>
+                            <div class="related-links">
+                                <a href="../rule/traveling.html" class="related-link">Правило пробежки</a>
+                                <a href="../challenge/dribbling-cone-slalom.html" class="related-link">Челлендж ведения мяча</a>
+                                <a href="../plan/basketball-basics-1month.html" class="related-link">Тренировки для новичков</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-features">
+            <div class="container">
+                <h2>Особенности нашего калькулятора</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb fa-2x"></i>
+                        <h3>Контекстная информация</h3>
+                        <p>Все расчеты учитывают лигу (FIBA/NBA), возраст, уровень подготовки и условия игры</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-history fa-2x"></i>
+                        <h3>История расчетов</h3>
+                        <p>Сохраняйте свои предыдущие расчеты и отслеживайте изменения со временем</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-link fa-2x"></i>
+                        <h3>Связанный контент</h3>
+                        <p>Каждый калькулятор связан с соответствующими правилами, челленджами и тренировками</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt fa-2x"></i>
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Все калькуляторы работают на любом устройстве - телефоне, планшете или компьютере</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../tutorials.html">Видео</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/calculators/playerPosition.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы калькулятора
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Определение позиции игрока - Калькуляторы - BasketGuide',
+                'Калькулятор определения позиции игрока в баскетболе. Найдите свою идеальную позицию на площадке исходя из физических данных и навыков',
+                ['баскетбол', 'калькулятор', 'позиция игрока', 'рост', 'навыки', 'физические данные']
+            );
+            
+            // Обновляем отображение значений слайдеров
+            document.getElementById('speed').addEventListener('input', function() {
+                document.getElementById('speed-value').textContent = this.value;
+            });
+            
+            document.getElementById('jumping').addEventListener('input', function() {
+                document.getElementById('jumping-value').textContent = this.value;
+            });
+            
+            document.getElementById('shooting').addEventListener('input', function() {
+                document.getElementById('shooting-value').textContent = this.value;
+            });
+            
+            document.getElementById('defense').addEventListener('input', function() {
+                document.getElementById('defense-value').textContent = this.value;
+            });
+            
+            document.getElementById('experience').addEventListener('input', function() {
+                document.getElementById('experience-value').textContent = this.value;
+            });
+        });
+    </script>
+</body>
+</html>

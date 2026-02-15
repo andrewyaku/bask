@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индекс эффективности игрока - Калькуляторы - BasketGuide</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Калькулятор индекса эффективности игрока. Оцените производительность игрока на площадке с помощью комплексного показателя">
+    <meta name="keywords" content="баскетбол, калькулятор, индекс эффективности, статистика, производительность">
+    <link rel="canonical" href="https://basketguide.ru/calculators/player-index">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Индекс эффективности игрока - Калькуляторы - BasketGuide">
+    <meta property="og:description" content="Калькулятор индекса эффективности игрока. Оцените производительность игрока на площадке с помощью комплексного показателя">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/calculators/player-index">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Индекс эффективности игрока - Калькуляторы - BasketGuide">
+    <meta name="twitter:description" content="Калькулятор индекса эффективности игрока. Оцените производительность игрока на площадке">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="../calculators.html" class="active"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="../rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="../challenges.html"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="../blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="../plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="../about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-hero">
+            <div class="container">
+                <h1>Индекс эффективности игрока</h1>
+                <p>Оцените свою производительность на площадке с помощью комплексного показателя</p>
+            </div>
+        </section>
+
+        <section class="calculator-content">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="calculator-form-container">
+                        <form id="player-index-calculator" class="calculator-form" data-calculator-id="player-index">
+                            <div class="form-group">
+                                <label for="points">Очки</label>
+                                <input type="number" id="points" name="points" class="form-control" min="0" max="50" placeholder="Количество набранных очков" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="rebounds">Подборы</label>
+                                <input type="number" id="rebounds" name="rebounds" class="form-control" min="0" max="25" placeholder="Количество подборов" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="assists">Передачи</label>
+                                <input type="number" id="assists" name="assists" class="form-control" min="0" max="20" placeholder="Количество результативных передач" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="steals">Перехваты</label>
+                                <input type="number" id="steals" name="steals" class="form-control" min="0" max="10" placeholder="Количество перехватов" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="blocks">Блоки</label>
+                                <input type="number" id="blocks" name="blocks" class="form-control" min="0" max="10" placeholder="Количество блоков" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="turnovers">Потери</label>
+                                <input type="number" id="turnovers" name="turnovers" class="form-control" min="0" max="15" placeholder="Количество потерь" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="personalFouls">Персональные фолы</label>
+                                <input type="number" id="personalFouls" name="personalFouls" class="form-control" min="0" max="6" placeholder="Количество фолов" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="minutes">Минуты на площадке</label>
+                                <input type="number" id="minutes" name="minutes" class="form-control" min="1" max="48" value="40" placeholder="Время в игре">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Рассчитать индекс</button>
+                            <button type="reset" class="btn reset-btn">Сбросить</button>
+                        </form>
+                    </div>
+                    
+                    <div class="calculator-info">
+                        <h2>О индексе эффективности игрока</h2>
+                        <p>Индекс эффективности игрока (Player Efficiency Rating, PER) - это статистический показатель, который используется для оценки общей производительности игрока на площадке. Он учитывает как положительные, так и отрицательные действия игрока.</p>
+                        
+                        <h3>Как рассчитывается индекс?</h3>
+                        <p>Упрощенная формула индекса эффективности:</p>
+                        <p><strong>(Очки + Подборы + Передачи + Перехваты + Блоки - Потери - Фолы) / Количество сыгранных минут * 40</strong></p>
+                        
+                        <h3>Как интерпретировать результат?</h3>
+                        <ul>
+                            <li><strong>Выше 25:</strong> Выдающийся уровень</li>
+                            <li><strong>20-25:</strong> Очень хороший уровень</li>
+                            <li><strong>15-20:</strong> Хороший уровень</li>
+                            <li><strong>10-15:</strong> Средний уровень</li>
+                            <li><strong>5-10:</strong> Ниже среднего</li>
+                            <li><strong>Меньше 5:</strong> Нуждается в улучшении</li>
+                        </ul>
+                        
+                        <div class="related-content">
+                            <h3>Связанный контент</h3>
+                            <div class="related-links">
+                                <a href="../rule/foul.html" class="related-link">Правило фола</a>
+                                <a href="../challenge/foul-identification.html" class="related-link">Челлендж определения фола</a>
+                                <a href="../plan/basketball-basics-1month.html" class="related-link">Тренировки для новичков</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-features">
+            <div class="container">
+                <h2>Особенности нашего калькулятора</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb fa-2x"></i>
+                        <h3>Контекстная информация</h3>
+                        <p>Все расчеты учитывают лигу (FIBA/NBA), возраст, уровень подготовки и условия игры</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-history fa-2x"></i>
+                        <h3>История расчетов</h3>
+                        <p>Сохраняйте свои предыдущие расчеты и отслеживайте изменения со временем</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-link fa-2x"></i>
+                        <h3>Связанный контент</h3>
+                        <p>Каждый калькулятор связан с соответствующими правилами, челленджами и тренировками</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt fa-2x"></i>
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Все калькуляторы работают на любом устройстве - телефоне, планшете или компьютере</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="../calculators.html">Калькуляторы</a></li>
+                        <li><a href="../rules.html">Правила</a></li>
+                        <li><a href="../challenges.html">Челленджи</a></li>
+                        <li><a href="../blog.html">Блог</a></li>
+                        <li><a href="../about.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/seo.js"></script>
+    <script src="../../js/calculators/playerIndex.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы калькулятора
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Индекс эффективности игрока - Калькуляторы - BasketGuide',
+                'Калькулятор индекса эффективности игрока. Оцените производительность игрока на площадке с помощью комплексного показателя',
+                ['баскетбол', 'калькулятор', 'индекс эффективности', 'статистика', 'производительность']
+            );
+        });
+    </script>
+</body>
+</html>

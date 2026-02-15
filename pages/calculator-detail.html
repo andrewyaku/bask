@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Размер баскетбольного мяча - BasketGuide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Калькулятор размера баскетбольного мяча. Узнайте, какой размер мяча выбрать в зависимости от возраста, пола и условий игры">
+    <meta name="keywords" content="размер мяча, баскетбол, калькулятор, выбор мяча, детский мяч, подростковый мяч">
+    <link rel="canonical" href="https://basketguide.ru/calculators/ball-size">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Размер баскетбольного мяча - BasketGuide">
+    <meta property="og:description" content="Калькулятор размера баскетбольного мяча. Узнайте, какой размер мяча выбрать в зависимости от возраста, пола и условий игры">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/calculators/ball-size">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Размер баскетбольного мяча - BasketGuide">
+    <meta name="twitter:description" content="Калькулятор размера баскетбольного мяча. Узнайте, какой размер мяча выбрать в зависимости от возраста, пола и условий игры">
+    <meta name="twitter:site" content="@basketguide">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="/calculators/" class="active"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="/rules/"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="/challenges/"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="/tutorials/"><i class="fas fa-play-circle"></i> Видео</a></li>
+                    <li><a href="/blog/"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="/about/"><i class="fas fa-info-circle"></i> О нас</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-hero">
+            <div class="container">
+                <h1>Размер баскетбольного мяча</h1>
+                <p>Узнайте, какой размер мяча выбрать в зависимости от возраста, пола и условий игры</p>
+            </div>
+        </section>
+
+        <section class="calculator-content">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="calculator-form-container">
+                        <form id="ball-size-calculator" class="calculator-form" data-calculator-id="ball-size">
+                            <div class="form-group">
+                                <label for="age">Возраст</label>
+                                <input type="number" id="age" name="age" class="form-control" min="4" max="80" placeholder="Введите возраст" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Пол</label>
+                                <select id="gender" name="gender" class="form-control">
+                                    <option value="male">Мужской</option>
+                                    <option value="female">Женский</option>
+                                    <option value="any" selected>Любой</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Условия игры</label>
+                                <select id="location" name="location" class="form-control">
+                                    <option value="indoor">В зале</option>
+                                    <option value="outdoor">На улице</option>
+                                    <option value="any" selected>Любые</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Рассчитать размер мяча</button>
+                            <button type="reset" class="btn reset-btn">Сбросить</button>
+                        </form>
+                    </div>
+                    
+                    <div class="calculator-info">
+                        <h2>О размерах баскетбольного мяча</h2>
+                        <p>Баскетбольные мячи различаются по размеру в зависимости от возраста и пола игроков:</p>
+                        <ul>
+                            <li><strong>Размер 3 (22 дюйма)</strong> - для детей младше 8 лет</li>
+                            <li><strong>Размер 5 (27.5 дюйма)</strong> - для детей до 12 лет</li>
+                            <li><strong>Размер 6 (28.5 дюйма)</strong> - для девочек до 15 лет и женщин</li>
+                            <li><strong>Размер 7 (29.5 дюйма)</strong> - стандартный мужской мяч</li>
+                        </ul>
+                        
+                        <h3>Почему важен правильный размер мяча?</h3>
+                        <p>Правильный размер мяча помогает:</p>
+                        <ul>
+                            <li>Развивать правильную технику игры</li>
+                            <li>Улучшать контроль над мячом</li>
+                            <li>Предотвращать травмы</li>
+                            <li>Развивать силу хвата у молодых игроков</li>
+                        </ul>
+                        
+                        <div class="related-content">
+                            <h3>Связанный контент</h3>
+                            <div class="related-links">
+                                <a href="/rules/traveling" class="related-link">Правила ведения мяча</a>
+                                <a href="/challenges/dribbling-cone-slalom" class="related-link">Челлендж ведения мяча</a>
+                                <a href="/tutorials/dribbling-basics" class="related-link">Видео: Основы ведения мяча</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Ваш надежный источник информации о баскетболе</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/calculators/">Калькуляторы</a></li>
+                        <li><a href="/rules/">Правила</a></li>
+                        <li><a href="/challenges/">Челленджи</a></li>
+                        <li><a href="/about/">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/seo.js"></script>
+    <script src="../js/calculators/ballSize.js"></script>
+    <script>
+        // Обновляем SEO-данные для страницы калькулятора
+        document.addEventListener('DOMContentLoaded', function() {
+            updateMetaTags(
+                'Размер баскетбольного мяча - BasketGuide',
+                'Калькулятор размера баскетбольного мяча. Узнайте, какой размер мяча выбрать в зависимости от возраста, пола и условий игры',
+                ['размер мяча', 'баскетбол', 'калькулятор', 'выбор мяча', 'детский мяч', 'подростковый мяч']
+            );
+        });
+    </script>
+</body>
+</html>

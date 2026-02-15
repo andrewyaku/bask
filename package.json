@@ -1,0 +1,37 @@
+{
+  "name": "basketguide",
+  "version": "1.0.0",
+  "description": "Информационно-интерактивный веб-сайт о баскетболе с калькуляторами, объяснениями правил и интерактивными челленджами",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s .",
+    "dev": "live-server --port=3000",
+    "build": "echo 'Build process not configured for static site'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "basketball",
+    "education",
+    "interactive",
+    "calculators",
+    "rules",
+    "challenges",
+    "sports",
+    "training",
+  ],
+  "author": "BasketGuide Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/basketguide/basketguide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/basketguide/basketguide/issues"
+  },
+  "homepage": "https://basketguide.ru"
+}
