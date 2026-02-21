@@ -28,6 +28,14 @@
                     <li><a href="/pages/about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
                     <li><a href="/pages/contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
                 </ul>
+                <div class="nav-search">
+                    <div class="search-input-wrapper">
+                        <input type="text" class="nav-search-input" placeholder="Поиск..." aria-label="Поиск по сайту">
+                        <button class="nav-search-btn" aria-label="Найти">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -116,6 +124,7 @@
                         <li><a href="/pages/rules.html">Правила</a></li>
                         <li><a href="/pages/challenges.html">Челленджи</a></li>
                         <li><a href="/pages/blog.html">Блог</a></li>
+                        <li><a href="/pages/search.html">Поиск</a></li>
                         <li><a href="/pages/about.html">О нас</a></li>
                     </ul>
                 </div>
@@ -126,6 +135,10 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr-languages/1.10.0/lunr.stemmer.support.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr-languages/1.10.0/lunr.ru.min.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

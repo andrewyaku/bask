@@ -40,7 +40,21 @@
   .hamburger {
     display: flex;
   }
-  
+
+  .nav-search {
+    width: 100%;
+    margin: 15px 0 0 0;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+  }
+
+  .nav-search-input {
+    width: 100%;
+    flex: 1;
+  }
+
   .hero h1 {
     font-size: 2.2rem;
   }

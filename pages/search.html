@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск по сайту - BasketGuide</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Поиск по сайту BasketGuide. Найдите правила, статьи, калькуляторы и тренировочные планы по баскетболу">
+    <meta name="keywords" content="баскетбол, поиск, правила, статьи, калькуляторы, тренировки">
+    <link rel="canonical" href="https://basketguide.ru/pages/search.html">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Поиск по сайту - BasketGuide">
+    <meta property="og:description" content="Поиск по всем материалам сайта BasketGuide">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketguide.ru/pages/search.html">
+    <meta property="og:site_name" content="BasketGuide">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Поиск по сайту - BasketGuide">
+    <meta name="twitter:description" content="Поиск по всем материалам сайта BasketGuide">
+    <meta name="twitter:site" content="@basketguide">
+    <style>
+        .search-page {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .search-page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search-page-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .search-form-container {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .search-input-wrapper {
+            display: flex;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 1px solid #ced4da;
+            border-right: none;
+            font-size: 1.1rem;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-button {
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .search-button:hover {
+            background-color: #e55a2b;
+        }
+
+        .search-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--secondary-color);
+            background-color: transparent;
+            color: var(--secondary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .search-results {
+            margin-top: 30px;
+        }
+
+        .results-count {
+            color: #6c757d;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .search-result-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 15px;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .search-result-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .search-result-type {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .search-result-type.rule { background-color: var(--primary-color); }
+        .search-result-type.blog { background-color: var(--secondary-color); }
+        .search-result-type.calculator { background-color: var(--accent-color); color: var(--dark-color); }
+        .search-result-type.challenge { background-color: var(--success-color); }
+        .search-result-type.plan { background-color: var(--danger-color); }
+
+        .search-result-title {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 8px;
+        }
+
+        .search-result-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .search-result-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-result-excerpt {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .search-result-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: #adb5bd;
+        }
+
+        .search-result-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .search-result-tag {
+            padding: 3px 10px;
+            background-color: #f8f9fa;
+            color: #6c757d;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            color: #dee2e6;
+            margin-bottom: 20px;
+        }
+
+        .no-results h3 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+
+        .search-suggestions {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+        }
+
+        .search-suggestions h4 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .suggestion-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .suggestion-link {
+            padding: 8px 16px;
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .suggestion-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .search-loading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .search-loading i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Тёмная тема */
+        @media (prefers-color-scheme: dark) {
+            .search-result-item {
+                background-color: #1f3a5f;
+            }
+
+            .search-result-title {
+                color: #f0f0f0;
+            }
+
+            .search-result-excerpt {
+                color: #c0c0c0;
+            }
+
+            .search-input {
+                background-color: #16213e;
+                border-color: #3d5a80;
+                color: #f0f0f0;
+            }
+
+            .search-input:focus {
+                border-color: var(--primary-color);
+            }
+
+            .no-results {
+                color: #c0c0c0;
+            }
+
+            .no-results i {
+                color: #3d5a80;
+            }
+
+            .search-suggestions {
+                background-color: #16213e;
+            }
+
+            .search-suggestions h4 {
+                color: #f0f0f0;
+            }
+
+            .suggestion-link {
+                background-color: #1f3a5f;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><i class="fas fa-basketball-ball"></i> BasketGuide</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="./calculators.html"><i class="fas fa-calculator"></i> Калькуляторы</a></li>
+                    <li><a href="./rules.html"><i class="fas fa-book"></i> Правила</a></li>
+                    <li><a href="./challenges.html"><i class="fas fa-trophy"></i> Челленджи</a></li>
+                    <li><a href="./blog.html"><i class="fas fa-blog"></i> Блог</a></li>
+                    <li><a href="./plans.html"><i class="fas fa-dumbbell"></i> Тренировки</a></li>
+                    <li><a href="./about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="./contact.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="search-page">
+        <div class="search-page-header">
+            <h1><i class="fas fa-search"></i> Поиск по сайту</h1>
+            <p>Найдите правила, статьи, калькуляторы и тренировочные планы</p>
+        </div>
+
+        <div class="search-form-container">
+            <div class="search-input-wrapper">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Введите запрос (например: пробежка, бросок, тренировки)..."
+                    autocomplete="off"
+                >
+                <button class="search-button" id="searchButton">
+                    <i class="fas fa-search"></i> Найти
+                </button>
+            </div>
+
+            <div class="search-filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="rules">Правила</button>
+                <button class="filter-btn" data-filter="blog">Статьи</button>
+                <button class="filter-btn" data-filter="calculators">Калькуляторы</button>
+                <button class="filter-btn" data-filter="challenges">Челленджи</button>
+                <button class="filter-btn" data-filter="plans">Планы</button>
+            </div>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <div class="search-loading">
+                <i class="fas fa-spinner"></i>
+                <p>Загрузка поиска...</p>
+            </div>
+        </div>
+
+        <div class="search-suggestions" id="searchSuggestions" style="display: none;">
+            <h4>Популярные запросы:</h4>
+            <div class="suggestion-links">
+                <a href="#" class="suggestion-link" data-query="пробежка">Пробежка</a>
+                <a href="#" class="suggestion-link" data-query="фол">Фол</a>
+                <a href="#" class="suggestion-link" data-query="бросок">Бросок</a>
+                <a href="#" class="suggestion-link" data-query="тренировка">Тренировка</a>
+                <a href="#" class="suggestion-link" data-query="калькулятор">Калькулятор</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BasketGuide</h3>
+                    <p>Всё о баскетболе в одном месте</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="./calculators.html">Калькуляторы</a></li>
+                        <li><a href="./rules.html">Правила</a></li>
+                        <li><a href="./challenges.html">Челленджи</a></li>
+                        <li><a href="./blog.html">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="./about.html">О нас</a></li>
+                        <li><a href="./contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 BasketGuide. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lunr.js для поиска -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <!-- Плагин для поддержки русского языка -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr-languages/1.10.0/lunr.stemmer.support.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr-languages/1.10.0/lunr.ru.min.js"></script>
+    <script src="../js/search.js" defer></script>
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
