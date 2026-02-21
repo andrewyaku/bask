@@ -131,39 +131,516 @@
 /* Стили для темного режима */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
   }
-  
+
+  .navbar {
+    background-color: #16213e;
+  }
+
+  .nav-menu li a {
+    color: #f0f0f0;
+  }
+
+  .nav-menu li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  .bar {
+    background-color: #f0f0f0;
+  }
+
   .hero {
-    background: linear-gradient(135deg, #cc562b, #257371);
+    background: linear-gradient(135deg, #ff8c61, #4db8b6);
   }
-  
+
   .features {
-    background-color: #1e1e1e;
+    background-color: #16213e;
   }
-  
+
+  .features h2 {
+    color: #f0f0f0;
+  }
+
   .feature-card {
-    background-color: #2d2d2d;
-    color: #e0e0e0;
+    background-color: #1f3a5f;
+    color: #f0f0f0;
   }
-  
+
+  .feature-card h3 {
+    color: #f0f0f0;
+  }
+
   .popular-calculators {
-    background-color: #1a232a;
+    background-color: #0f3460;
   }
-  
+
+  .popular-calculators h2 {
+    color: #f0f0f0;
+  }
+
   .calc-item {
-    background-color: #2d2d2d;
-    color: #e0e0e0;
+    background-color: #1f3a5f;
+    color: #f0f0f0;
   }
-  
+
+  .calc-item h3 {
+    color: #f0f0f0;
+  }
+
+  .calc-item p {
+    color: #c0c0c0;
+  }
+
   .calculator-container {
-    background-color: #2d2d2d;
-    color: #e0e0e0;
+    background-color: #1f3a5f;
+    color: #f0f0f0;
   }
-  
+
+  .calculator-title {
+    color: var(--primary-color);
+  }
+
+  .form-control {
+    background-color: #16213e;
+    color: #f0f0f0;
+    border-color: #3d5a80;
+  }
+
+  .form-control:focus {
+    border-color: var(--primary-color);
+  }
+
   .result-container {
-    background-color: #333333;
+    background-color: #16213e;
+    border-left-color: var(--primary-color);
+  }
+
+  .result-value {
+    color: var(--primary-color);
+  }
+
+  .related-section {
+    background-color: #1f3a5f;
+  }
+
+  .related-content h3 {
+    color: var(--secondary-color);
+  }
+
+  footer {
+    background-color: #0f1b2e;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    color: var(--primary-color);
+  }
+
+  .social-links a {
+    background-color: #1f3a5f;
+  }
+
+  .social-links a:hover {
+    background-color: var(--primary-color);
+  }
+
+  .copyright {
+    color: #a0a0a0;
+  }
+
+  /* Страницы правил */
+  .page-hero {
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    color: #f0f0f0;
+  }
+
+  .page-hero h1 {
+    color: #f0f0f0;
+  }
+
+  .page-hero p {
+    color: #c0c0c0;
+  }
+
+  .rules-list {
+    background-color: #1a1a2e;
+  }
+
+  .rule-card {
+    background-color: #1f3a5f;
+    color: #f0f0f0;
+  }
+
+  .rule-card h3 {
+    color: #f0f0f0;
+  }
+
+  .rule-card p {
+    color: #c0c0c0;
+  }
+
+  .rule-icon {
+    color: var(--primary-color);
+  }
+
+  .rule-categories {
+    background-color: #16213e;
+  }
+
+  .rule-categories h2 {
+    color: #f0f0f0;
+  }
+
+  .category-card {
+    background-color: #1f3a5f;
+    color: #f0f0f0;
+  }
+
+  .category-card h3 {
+    color: #f0f0f0;
+  }
+
+  .category-card ul li a {
+    color: #c0c0c0;
+  }
+
+  .category-card ul li a:hover {
+    color: var(--primary-color);
+  }
+
+  /* Страницы блога */
+  .blog-list {
+    background-color: #1a1a2e;
+  }
+
+  .blog-card {
+    background-color: #1f3a5f;
+    color: #f0f0f0;
+  }
+
+  .blog-card h3 {
+    color: #f0f0f0;
+  }
+
+  .blog-card p {
+    color: #c0c0c0;
+  }
+
+  .blog-meta {
+    color: #a0a0a0;
+  }
+
+  .blog-meta span {
+    color: #a0a0a0;
+  }
+
+  .blog-meta a.category {
+    color: var(--accent-color);
+  }
+
+  .blog-image img {
+    opacity: 0.9;
+  }
+
+  /* Страницы челленджей */
+  .challenges-list {
+    background-color: #1a1a2e;
+  }
+
+  .challenge-card {
+    background-color: #1f3a5f;
+    color: #f0f0f0;
+  }
+
+  .challenge-card h3 {
+    color: #f0f0f0;
+  }
+
+  .challenge-card p {
+    color: #c0c0c0;
+  }
+
+  .challenge-icon {
+    color: var(--accent-color);
+  }
+
+  .challenge-difficulty {
+    color: #a0a0a0;
+  }
+
+  .challenge-meta {
+    color: #a0a0a0;
+  }
+
+  /* Страницы тренировочных планов */
+  .plans-list {
+    background-color: #1a1a2e;
+  }
+
+  .plan-card {
+    background-color: #1f3a5f;
+    color: #f0f0f0;
+  }
+
+  .plan-card h3 {
+    color: #f0f0f0;
+  }
+
+  .plan-card p {
+    color: #c0c0c0;
+  }
+
+  .plan-icon {
+    color: var(--success-color);
+  }
+
+  .plan-meta {
+    color: #a0a0a0;
+  }
+
+  .plan-duration {
+    color: var(--primary-color);
+  }
+
+  /* Страницы сравнения */
+  .comparison-section {
+    background-color: #16213e;
+  }
+
+  .comparison-section h2 {
+    color: #f0f0f0;
+  }
+
+  .comparison-table {
+    background-color: #1f3a5f;
+    color: #f0f0f0;
+  }
+
+  .comparison-table th {
+    background-color: #0f3460;
+    color: #f0f0f0;
+  }
+
+  .comparison-table td {
+    color: #c0c0c0;
+    border-color: #3d5a80;
+  }
+
+  /* Страницы статей блога */
+  .blog-post {
+    background-color: #1a1a2e;
+  }
+
+  .blog-post h1 {
+    color: #f0f0f0;
+  }
+
+  .blog-post-content {
+    color: #c0c0c0;
+  }
+
+  .blog-post-content h2 {
+    color: #f0f0f0;
+  }
+
+  .blog-post-content h3 {
+    color: #f0f0f0;
+  }
+
+  .blog-post-content p {
+    color: #c0c0c0;
+  }
+
+  .blog-post-content ul li {
+    color: #c0c0c0;
+  }
+
+  .blog-post-content ol li {
+    color: #c0c0c0;
+  }
+
+  /* Страницы деталей правил */
+  .rule-detail {
+    background-color: #1a1a2e;
+  }
+
+  .rule-detail h1 {
+    color: #f0f0f0;
+  }
+
+  .rule-detail-content {
+    color: #c0c0c0;
+  }
+
+  .rule-detail-content h2 {
+    color: #f0f0f0;
+  }
+
+  .rule-detail-content h3 {
+    color: #f0f0f0;
+  }
+
+  .rule-detail-content p {
+    color: #c0c0c0;
+  }
+
+  .rule-detail-content ul li {
+    color: #c0c0c0;
+  }
+
+  .rule-detail-content ol li {
+    color: #c0c0c0;
+  }
+
+  .rule-examples {
+    background-color: #1f3a5f;
+  }
+
+  .rule-examples h3 {
+    color: #f0f0f0;
+  }
+
+  /* Страницы деталей челленджей */
+  .challenge-detail {
+    background-color: #1a1a2e;
+  }
+
+  .challenge-detail h1 {
+    color: #f0f0f0;
+  }
+
+  .challenge-content {
+    color: #c0c0c0;
+  }
+
+  .challenge-content h2 {
+    color: #f0f0f0;
+  }
+
+  .challenge-content h3 {
+    color: #f0f0f0;
+  }
+
+  .challenge-content p {
+    color: #c0c0c0;
+  }
+
+  .challenge-content ul li {
+    color: #c0c0c0;
+  }
+
+  .challenge-content ol li {
+    color: #c0c0c0;
+  }
+
+  .challenge-instructions {
+    background-color: #1f3a5f;
+  }
+
+  .challenge-instructions h3 {
+    color: #f0f0f0;
+  }
+
+  /* Страницы деталей планов */
+  .plan-detail {
+    background-color: #1a1a2e;
+  }
+
+  .plan-detail h1 {
+    color: #f0f0f0;
+  }
+
+  .plan-content {
+    color: #c0c0c0;
+  }
+
+  .plan-content h2 {
+    color: #f0f0f0;
+  }
+
+  .plan-content h3 {
+    color: #f0f0f0;
+  }
+
+  .plan-content p {
+    color: #c0c0c0;
+  }
+
+  .plan-content ul li {
+    color: #c0c0c0;
+  }
+
+  .plan-content ol li {
+    color: #c0c0c0;
+  }
+
+  .plan-schedule {
+    background-color: #1f3a5f;
+  }
+
+  .plan-schedule h3 {
+    color: #f0f0f0;
+  }
+
+  .plan-schedule table {
+    color: #c0c0c0;
+  }
+
+  .plan-schedule th {
+    background-color: #0f3460;
+    color: #f0f0f0;
+  }
+
+  .plan-schedule td {
+    border-color: #3d5a80;
+  }
+
+  /* Страницы "О нас" и "Контакты" */
+  .about-section {
+    background-color: #16213e;
+  }
+
+  .about-section h2 {
+    color: #f0f0f0;
+  }
+
+  .about-section p {
+    color: #c0c0c0;
+  }
+
+  .team-member {
+    background-color: #1f3a5f;
+  }
+
+  .team-member h3 {
+    color: #f0f0f0;
+  }
+
+  .team-member p {
+    color: #c0c0c0;
+  }
+
+  .contact-form {
+    background-color: #1f3a5f;
+  }
+
+  .contact-form h2 {
+    color: #f0f0f0;
+  }
+
+  .contact-info {
+    background-color: #16213e;
+  }
+
+  .contact-info h3 {
+    color: #f0f0f0;
+  }
+
+  .contact-info p {
+    color: #c0c0c0;
   }
 }
 
