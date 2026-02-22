@@ -24,14 +24,29 @@
      */
     async function initSearch() {
         try {
+            // Определяем правильный путь к индексу в зависимости от текущей страницы
+            const currentPath = window.location.pathname;
+            let indexPath = 'data/search-index.json';
+            
+            if (currentPath.includes('/pages/')) {
+                indexPath = '../data/search-index.json';
+            } else if (currentPath.includes('/calculators/') || 
+                       currentPath.includes('/challenges/') || 
+                       currentPath.includes('/plans/') || 
+                       currentPath.includes('/rule/')) {
+                indexPath = '../../data/search-index.json';
+            }
+            
             // Загружаем поисковый индекс
-            const response = await fetch('../data/search-index.json');
+            const response = await fetch(indexPath);
             const data = await response.json();
             documents = data.documents;
 
-            // Инициализируем Lunr с поддержкой русского языка
+            // Инициализируем Lunr (базовая версия без плагинов)
             idx = lunr(function() {
-                this.use(lunr.ru);
+                // Настройка для поддержки кириллицы
+                this.pipeline.reset();
+                this.searchPipeline.reset();
                 
                 this.field('title', { boost: 10 });
                 this.field('excerpt', { boost: 5 });
@@ -45,6 +60,12 @@
                     this.add(doc);
                 });
             });
+
+            console.log('Поисковый индекс загружен:', documents.length, 'документов');
+            
+            // Тестовый поиск для проверки
+            const testResults = idx.search('фол');
+            console.log('Тестовый поиск "фол":', testResults.length, 'результатов');
 
             // Инициализируем поисковую строку в навигации
             initNavSearch();
@@ -101,7 +122,17 @@
         } else {
             // Переход на страницу поиска
             const currentPath = window.location.pathname;
-            const prefix = currentPath.includes('/pages/') ? '../' : './';
+            let prefix = '';
+            
+            if (currentPath.includes('/pages/')) {
+                prefix = '../';
+            } else if (currentPath.includes('/calculators/') || 
+                       currentPath.includes('/challenges/') || 
+                       currentPath.includes('/plans/') || 
+                       currentPath.includes('/rule/')) {
+                prefix = '../../';
+            }
+            
             window.location.href = `${prefix}pages/search.html?q=${encodeURIComponent(query)}`;
         }
     }
@@ -190,9 +221,49 @@
         newUrl.searchParams.set('q', query);
         window.history.pushState({}, '', newUrl);
 
+        const queryLower = query.trim().toLowerCase();
+        const terms = queryLower.split(/\s+/).filter(t => t.length > 0);
+
+        // Поиск по частичному совпадению через JavaScript
+        const results = documents.filter(doc => {
+            const searchText = (
+                doc.title + ' ' + 
+                doc.excerpt + ' ' + 
+                doc.keywords + ' ' + 
+                doc.content
+            ).toLowerCase();
+            
+            // Проверяем, содержится ли хотя бы один термин в тексте
+            return terms.some(term => searchText.includes(term));
+        }).map(doc => {
+            // Возвращаем в формате Lunr
+            return { ref: doc.id, score: 1 };
+        });
+
+        // Сортируем по релевантности (заголовок > ключевые слова > контент)
+        results.sort((a, b) => {
+            const docA = documents.find(d => d.id === a.ref);
+            const docB = documents.find(d => d.id === b.ref);
+            
+            let scoreA = 0, scoreB = 0;
+            
+            terms.forEach(term => {
+                if (docA.title.toLowerCase().includes(term)) scoreA += 10;
+                if (docA.keywords.toLowerCase().includes(term)) scoreA += 5;
+                if (docA.excerpt.toLowerCase().includes(term)) scoreA += 3;
+                
+                if (docB.title.toLowerCase().includes(term)) scoreB += 10;
+                if (docB.keywords.toLowerCase().includes(term)) scoreB += 5;
+                if (docB.excerpt.toLowerCase().includes(term)) scoreB += 3;
+            });
+            
+            return scoreB - scoreA;
+        });
+
+        console.log('Найдено результатов:', results.length);
+
         // Небольшая задержка для визуального эффекта
         setTimeout(() => {
-            const results = idx.search(query);
             displayResults(results, query, searchResults);
         }, 300);
     }
@@ -356,4 +427,7 @@
     } else {
         initSearch();
     }
+    
+    // Для отладки
+    console.log('Поиск BasketGuide инициализирован');
 })();
